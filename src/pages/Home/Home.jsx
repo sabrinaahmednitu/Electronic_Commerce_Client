@@ -9,9 +9,6 @@ const Home = () => {
             <BannerComp></BannerComp>
             <FetureProductsComp></FetureProductsComp>
             <HelpComp></HelpComp>
-            <div>
-                <h2>i am home</h2>
-            </div>
         </div>
     );
 };
