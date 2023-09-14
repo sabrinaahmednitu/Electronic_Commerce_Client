@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import './Navbar.css'
 const Navbar = () => {
     const navItem = (
       <>
@@ -20,8 +20,8 @@ const Navbar = () => {
     );
     return (
       <div>
-        <div className="bg-base-100">
-          <div className="navbar bg-base-100 text-white font-bold ">
+        <div className="bg-white">
+          <div className="navbar bg-white  text-black font-bold ">
             <div className="navbar-start">
               <div className="dropdown">
                 <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -57,17 +57,19 @@ const Navbar = () => {
             <div className="navbar-end mx-auto ">
               {/* <p>{user?.displayName}</p> */}
               <div className="dropdown dropdown-end flex justify-center align-items-center">
-                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                {/* <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-10 rounded-full">
-                    {/* <img src={user?.photoURL} /> */}
+                    <img src={user?.photoURL} />
                   </div>
-                </label>
-                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                  <div className="w-10 rounded-full mt-2">
-                    <Link to="/cart">
-                      <i className="fa-solid fa-cart-shopping text-2xl"></i>
+                </label> */}
+                <label
+                  tabIndex={0}
+                  className="btn btn-ghost btn-circle avatar w-15 "
+                >
+                    <Link to="/cart" className="cart__trolly__link">
+                      <i className="fa-solid fa-cart-shopping text-2xl cart__trolly"></i>
+                      <span className="cart__total__item">5</span>
                     </Link>
-                  </div>
                 </label>
 
                 <label
