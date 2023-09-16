@@ -1,13 +1,14 @@
 import React from 'react';
-import FetureProductsComp from '../../components/Home/FeatureProducts/FetureProducts';
-import HelpComp from '../../components/Home/Help/Help';
-import Hero from '../../components/Home/Hero/Hero';
+import HeroComp from '../../components/Home/Hero/Hero';
+import ServicesComp from '../../components/Home/Services/Services';
+import TrustedComp from '../../components/Home/Trusted/Trusted';
 
 const Home = () => {
     return (
         <div>
-            <Hero></Hero>
-           
+            <HeroComp></HeroComp>
+           <ServicesComp></ServicesComp>
+           <TrustedComp></TrustedComp>
         </div>
     );
 };

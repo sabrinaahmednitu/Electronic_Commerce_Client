@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Help = () => {
+const Trusted = () => {
     return (
         <div>
-            <h1>help</h1>
+          <h1>Trusted</h1>
         </div>
     );
 };
 
-export default Help;
+export default Trusted;
