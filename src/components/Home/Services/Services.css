@@ -1,9 +1,18 @@
-
-.services-column-1 ,
-.services-column-2 ,
-.services-column-3{
-background-color: rgba(196, 194, 189, 0.356);
-height: 18rem;
+.services-main i{
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  border-radius: 50%;
+ display: grid;
+ justify-content: center;
+ align-items: center;
+  
+}
+.services-1 ,
+.services-2 ,
+.services-3{
+background-color: rgba(197, 222, 231, 0.356);
+height: 14rem;
 width: auto;
 display: flex;
 justify-content: center;
@@ -14,9 +23,22 @@ border-radius: 2rem;
 box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 color: black;
 }
-
-.row-1, .row-2{
-    gap: 4rem;
+.services-2 {
+    gap: 1.5rem;
+    background-color: transparent;
     box-shadow: none;
+   
 }
+.row-1{
+  background-color: rgba(197, 222, 231, 0.356);
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+border-radius: 1rem;
+padding: 15px;
+box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+gap: 10px;
 
+}
