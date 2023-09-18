@@ -3,7 +3,7 @@ import './Services.css';
 
 const Services = () => {
   return (
-    <div className="max-w-6xl container services-main grid lg:grid-cols-3 md:grid-cols-3 mx-auto pt-12 mb-12">
+    <div className="max-w-6xl container services-main grid lg:grid-cols-3 md:grid-cols-3 mx-auto mt-20">
       <div className="services-1">
         <i class="fa-solid fa-car text-indigo-600 text-2xl"></i>
         <h1>Super Fast and Free Delivery</h1>

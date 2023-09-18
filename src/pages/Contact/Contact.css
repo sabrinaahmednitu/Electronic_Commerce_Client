@@ -1,0 +1,35 @@
+.location-section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+
+.contact-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-direction: column;
+}
+
+.contact-form input ,textarea{
+    width: 550px;
+    background-color: transparent;
+    border: 2px solid #370feb5b;
+    padding: 10px;
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.contact-form input:hover ,textarea:hover{
+    /* border: 1px solid #eb0f6b5b; */
+    transform: scale(0.9);
+}
+
+.contact-form button{
+width: 275px;
+outline: none;
+border: none;
+color: white;
+}

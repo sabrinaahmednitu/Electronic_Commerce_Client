@@ -4,7 +4,7 @@ import HeroImg from '../../../images/family.jpg'
 
 const Hero = () => {
     return (
-      <div className="max-w-4xl mx-auto mt-12 mb-12">
+      <div className="max-w-4xl mx-auto mt-20">
         <div className="grid gap-12 lg:grid-cols-2 sm:grid-cols-1">
           <div className="hero-left text-black">
             <p>Welcome to</p>

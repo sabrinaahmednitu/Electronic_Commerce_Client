@@ -3,7 +3,7 @@ import './Trusted.css'
 
 const Trusted = () => {
     return (
-      <div className="brand-section">
+      <div className="brand-section mt-20 mb-12">
         <div className="container m-auto">
           <h3>Trusted by 100+ Companies</h3>
           <div className="brand-section-logo">

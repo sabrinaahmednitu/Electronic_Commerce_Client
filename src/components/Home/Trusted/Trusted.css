@@ -1,6 +1,8 @@
 .brand-section{
     padding: 40px 0 ;
-    background-color: rgb(236, 235, 235);
+    background-color: #c5dee75b;
+    /* background-color: rgb(236, 235, 235); */
+    color: black;
 }
 
 h3{

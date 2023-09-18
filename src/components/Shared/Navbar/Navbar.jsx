@@ -20,8 +20,7 @@ const Navbar = () => {
     );
     return (
       <div>
-        <div className="bg-white">
-          <div className="navbar bg-white  text-black font-bold ">
+          <div className="navbar bg-[#e6e7eb] text-black font-bold ">
             <div className="navbar-start">
               <div className="dropdown">
                 <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -42,7 +41,7 @@ const Navbar = () => {
                 </label>
                 <ul
                   tabIndex={0}
-                  className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                  className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-52"
                 >
                   {navItem}
                 </ul>
@@ -66,10 +65,10 @@ const Navbar = () => {
                   tabIndex={0}
                   className="btn btn-ghost btn-circle avatar w-15 "
                 >
-                    <Link to="/cart" className="cart__trolly__link">
-                      <i className="fa-solid fa-cart-shopping text-2xl cart__trolly"></i>
-                      <span className="cart__total__item">5</span>
-                    </Link>
+                  <Link to="/cart" className="cart__trolly__link">
+                    <i className="fa-solid fa-cart-shopping text-2xl cart__trolly"></i>
+                    <span className="cart__total__item">5</span>
+                  </Link>
                 </label>
 
                 <label
@@ -95,7 +94,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-        </div>
+
       </div>
     );
 };
