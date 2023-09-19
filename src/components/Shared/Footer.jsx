@@ -1,9 +1,27 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
-    return (
-      <div>
-        <footer className="footer p-10  bg-[#e6e7eb] text-black ">
+  return (
+    <div>
+      <section className="z-10">
+        <div className="footer-short max-w-4xl m-auto py-12 px-5 bg-[#f472b6] text-white rounded-lg translate-y-[65px] ">
+          <div className="grid grid-cols-2 gap-5">
+            <div>
+              <h3>Ready to get started ? </h3>
+              <h3>Talk to us today</h3>
+            </div>
+            <div>
+              <button className="btn w-[175px] block mx-auto text-white">
+                <Link to="/contact">GET STARTED</Link>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#e6e7eb] z-1">
+        <footer className="footer container mx-auto p-10 text-black pt-24">
           <nav>
             <header className="footer-title">Services</header>
             <a className="link link-hover">Branding</a>
@@ -43,8 +61,18 @@ const Footer = () => {
             </fieldset>
           </form>
         </footer>
-      </div>
-    );
+
+        <footer className="bg-[#e6e7eb] text-black  text-center pt-3 pb-5">
+          <hr class="h-px my-8 bg-base-100 border-0 w-[85%] mx-auto"></hr>
+          <h1>
+            {' '}
+            @ {new Date().getFullYear()} All Right Reserved by Sabrina Ahmed
+            Nitu
+          </h1>
+        </footer>
+      </section>
+    </div>
+  );
 };
 
 export default Footer;

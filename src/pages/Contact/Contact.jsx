@@ -32,9 +32,13 @@ const Contact = () => {
           </div>
         </section>
         <section className="contact-form-section mt-20">
-          <form className="contact-form w-[100%]">
-            <input type="text" placeholder="Name" />
-            <input type="text" placeholder="Email" />
+          <form
+            action="https://formspree.io/f/xwkdndpq"
+            method="POST"
+            className="contact-form w-[100%]"
+          >
+            <input type="text" placeholder="username" name="username" />
+            <input type="text" placeholder="Email" name="Email" />
             <textarea
               name=""
               id=""
