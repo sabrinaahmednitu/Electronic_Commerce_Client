@@ -46,7 +46,7 @@ const Contact = () => {
               rows="7"
               placeholder="Place your comment here"
             ></textarea>
-            <button className="btn bg-purple-600">Submit</button>
+            <button className="btn bg-indigo-400">Submit</button>
           </form>
         </section>
       </div>

@@ -5,14 +5,14 @@ const Footer = () => {
   return (
     <div>
       <section className="z-10">
-        <div className="footer-short max-w-4xl m-auto py-12 px-5 bg-[#f472b6] text-white rounded-lg translate-y-[65px] ">
+        <div className="footer-short max-w-4xl m-auto py-12 px-5 bg-[#BEADFA] bg-[#f472b6] text-white rounded-lg translate-y-[65px] ">
           <div className="grid grid-cols-2 gap-5">
             <div>
               <h3>Ready to get started ? </h3>
               <h3>Talk to us today</h3>
             </div>
             <div>
-              <button className="btn w-[175px] block mx-auto text-white">
+              <button className="btn w-[175px] bg-white block mx-auto text-black border-0 ">
                 <Link to="/contact">GET STARTED</Link>
               </button>
             </div>
