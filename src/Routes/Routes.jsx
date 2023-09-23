@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Main from "../Layout/Main";
-import About from "../pages/About/About";
 import Cart from "../pages/Cart/Cart";
 import Contact from "../pages/Contact/Contact";
+import CustomerService from "../pages/CustomerService/CustomerService";
 import Error from "../pages/Error/Error";
 import Home from "../pages/Home/Home";
 import Products from "../pages/Products/Products";
@@ -18,8 +18,8 @@ export const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: '/about',
-        element:<About></About>
+        path: '/customerservice',
+        element:<CustomerService></CustomerService>
       },
       {
         path: '/contact',
