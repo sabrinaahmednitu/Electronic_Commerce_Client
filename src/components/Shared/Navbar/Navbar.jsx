@@ -46,7 +46,7 @@ const Navbar = () => {
                   {navItem}
                 </ul>
               </div>
-              <a className="normal-case text-xl">Jewellary Town</a>
+              <a className="normal-case text-xl">Electronic Web</a>
             </div>
 
             <div className="navbar-center hidden lg:flex">

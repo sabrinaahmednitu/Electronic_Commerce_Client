@@ -1,8 +1,12 @@
+.customerService-main{
+   background-color: #088899;
+}
 .customer-service-cards{
 display: grid;
 grid-template-columns: repeat(3,1fr);
 margin-top: 30px;
 gap: 25px;
+ 
 }
 
 .customer-service-card img{
@@ -13,7 +17,8 @@ gap: 25px;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    background-color: #CAEDFF;
+    background-color: white;
+    /* background-color: #CAEDFF; */
     border-radius: 5px;
     padding-top: 20px;
     padding-bottom: 20px;

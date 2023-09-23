@@ -23,35 +23,41 @@ const Footer = () => {
       <section className="bg-[#e6e7eb] z-1">
         <footer className="footer container mx-auto p-10 text-black pt-24">
           <nav>
-            <header className="footer-title">Services</header>
-            <a className="link link-hover">Branding</a>
-            <a className="link link-hover">Design</a>
-            <a className="link link-hover">Marketing</a>
-            <a className="link link-hover">Advertisement</a>
+            <header className="footer-title">Get to Know Us</header>
+            <a className="link link-hover">Careers</a>
+            <a className="link link-hover">Blog</a>
+            <a className="link link-hover">About</a>
+            <a className="link link-hover">Investor</a>
+            <a className="link link-hover">Relations</a>
+            <a className="link link-hover">Electronic Web Devices</a>
+            <a className="link link-hover">Electronic Web Science</a>
           </nav>
           <nav>
-            <header className="footer-title">Company</header>
-            <a className="link link-hover">About us</a>
-            <a className="link link-hover">Contact</a>
-            <a className="link link-hover">Jobs</a>
-            <a className="link link-hover">Press kit</a>
+            <header className="footer-title">Make Money with Us</header>
+            <a className="link link-hover">Sell products on Electronic Web</a>
+            <a className="link link-hover">Sell on Electronic Web Business</a>
+            <a className="link link-hover">Sell apps on Electronic Web</a>
+            <a className="link link-hover">Become an Affiliate</a>
+            <a className="link link-hover">Advertise Your Products</a>
+            <a className="link link-hover">Self-Publish with Us</a>
+            <a className="link link-hover">Host an Electronic Web Hub</a>
           </nav>
           <nav>
-            <header className="footer-title">Legal</header>
-            <a className="link link-hover">Terms of use</a>
-            <a className="link link-hover">Privacy policy</a>
-            <a className="link link-hover">Cookie policy</a>
-          </nav>
-          <form>
-            <header className="footer-title">Newsletter</header>
-            <fieldset className="form-control w-80">
+            <header className="footer-title">
+              Electronic Web Payment Products
+            </header>
+            <a className="link link-hover">Electronic Web Business Card</a>
+            <a className="link link-hover">Shop with Points</a>
+            <a className="link link-hover">Reload Your Balance</a>
+            <a className="link link-hover">Electronic Web Currency Converter</a>
+            <fieldset className="form-control w-60">
               <label className="label">
                 <span className="label-text">Enter your email address</span>
               </label>
               <div className="relative">
                 <input
                   type="text"
-                  placeholder="username@site.com"
+                  placeholder="...@gmail.com"
                   className="input input-bordered w-full pr-16"
                 />
                 <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">
@@ -59,6 +65,15 @@ const Footer = () => {
                 </button>
               </div>
             </fieldset>
+          </nav>
+          <form>
+            <header className="footer-title">Let Us Help You</header>
+            <a className="link link-hover">Your Account</a>
+            <a className="link link-hover">Your Orders</a>
+            <a className="link link-hover">Shipping Rates & Policies</a>
+            <a className="link link-hover">Returns & Replacements</a>
+            <a className="link link-hover">Manage Your Content and Devices</a>
+            <a className="link link-hover">Help</a>
           </form>
         </footer>
 

@@ -14,83 +14,103 @@ import cs11 from '../../images/CustomerServiceimg/CS11.png'
 
 const CustomerService = () => {
     return (
-      <div className="">
-        <div className="text-black max-w-[1280px] mx-auto mt-20">
-          <h1 className="text-2xl "> Welcome to Amazon Customer Service</h1>
-          <h1 className="text-2xl mt-4">
-            What would you like help with today? You can quickly take care of
-            most things here, or connect with us when needed.
-          </h1>
+      <div>
+        <section className="customerService-main">
+          <div className=" max-w-[1280px] mx-auto pt-20 pb-20">
+            <h1 className="text-3xl text-white font-bold">
+              {' '}
+              Welcome to Amazon Customer Service
+            </h1>
+            <h1 className="text-2xl mt-4 text-white font-bold">
+              What would you like help with today? You can quickly take care of
+              most things here, or connect with us when needed.
+            </h1>
 
-          <div className="customer-service-cards">
-            <div className="customer-service-card">
-              <div>
-                <img src={cs1} alt="" />
+            <div className="customer-service-cards text-black">
+              <div className="customer-service-card">
+                <div>
+                  <img src={cs1} alt="" />
+                </div>
+                <div>A delivery, order or return</div>
               </div>
-              <div>A delivery, order or return</div>
-            </div>
-            <div className="customer-service-card">
-              <div>
-                <img src={cs2} alt="" />
+              <div className="customer-service-card">
+                <div>
+                  <img src={cs2} alt="" />
+                </div>
+                <div>A delivery, order or return</div>
               </div>
-              <div>A delivery, order or return</div>
-            </div>
-            <div className="customer-service-card">
-              <div>
-                <img src={cs3} alt="" />
+              <div className="customer-service-card">
+                <div>
+                  <img src={cs3} alt="" />
+                </div>
+                <div>A delivery, order or return</div>
               </div>
-              <div>A delivery, order or return</div>
-            </div>
-            <div className="customer-service-card">
-              <div>
-                <img src={cs4} alt="" />
+              <div className="customer-service-card">
+                <div>
+                  <img src={cs4} alt="" />
+                </div>
+                <div>A delivery, order or return</div>
               </div>
-              <div>A delivery, order or return</div>
-            </div>
-            <div className="customer-service-card">
-              <div>
-                <img src={cs5} alt="" />
+              <div className="customer-service-card">
+                <div>
+                  <img src={cs5} alt="" />
+                </div>
+                <div>A delivery, order or return</div>
               </div>
-              <div>A delivery, order or return</div>
-            </div>
-            <div className="customer-service-card">
-              <div>
-                <img src={cs6} alt="" />
+              <div className="customer-service-card">
+                <div>
+                  <img src={cs6} alt="" />
+                </div>
+                <div>A delivery, order or return</div>
               </div>
-              <div>A delivery, order or return</div>
-            </div>
-            <div className="customer-service-card">
-              <div>
-                <img src={cs7} alt="" />
+              <div className="customer-service-card">
+                <div>
+                  <img src={cs7} alt="" />
+                </div>
+                <div>A delivery, order or return</div>
               </div>
-              <div>A delivery, order or return</div>
-            </div>
-            <div className="customer-service-card">
-              <div>
-                <img src={cs8} alt="" />
+              <div className="customer-service-card">
+                <div>
+                  <img src={cs8} alt="" />
+                </div>
+                <div>A delivery, order or return</div>
               </div>
-              <div>A delivery, order or return</div>
-            </div>
-            <div className="customer-service-card">
-              <div>
-                <img src={cs9} alt="" />
+              <div className="customer-service-card">
+                <div>
+                  <img src={cs9} alt="" />
+                </div>
+                <div>A delivery, order or return</div>
               </div>
-              <div>A delivery, order or return</div>
-            </div>
-            <div className="customer-service-card">
-              <div>
-                <img src={cs10} alt="" />
+              <div className="customer-service-card">
+                <div>
+                  <img src={cs10} alt="" />
+                </div>
+                <div>A delivery, order or return</div>
               </div>
-              <div>A delivery, order or return</div>
-            </div>
-            <div className="customer-service-card">
-              <div>
-                <img src={cs11} alt="" />
+              <div className="customer-service-card">
+                <div>
+                  <img src={cs11} alt="" />
+                </div>
+                <div>A delivery, order or return</div>
               </div>
-              <div>A delivery, order or return</div>
             </div>
           </div>
-        </div>
+        </section>
+        <section>
+          <div className="container mx-auto mt-12">
+            <h1 className="text-3xl text-black font-bold mb-3">
+              Search our help library
+            </h1>
+            <input
+              type="text"
+              className="w-[75%] bg-white border p-2 rounded"
+              value="order"
+            />
+          </div>
+          <section className="container mx-auto text-black">
+            <h2 className="text-3xl mt-4" >All help topics</h2>
+          </section>
+        </section>
       </div>
     );
 };
