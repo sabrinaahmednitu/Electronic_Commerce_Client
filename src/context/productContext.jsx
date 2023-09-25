@@ -1,11 +1,20 @@
-import React, { createContext } from 'react';
+import { createContext, useContext } from 'react';
 
 const AppContext = createContext();
 
-const AppProvider = ({children}) => {
-    return <AppContext.Provider value='Nitu Ahmed'>
-       {children}
-   </AppContext.Provider>
+//delivery man
+const AppProvider = ({ children }) => {
+    return (
+      <AppContext.Provider value={{ myName: 'Sabrina Ahmed Nitu' }}>
+        {children}
+      </AppContext.Provider>
+    );
 };
 
-export { AppProvider, AppContext };
+//custom hook
+const useProductContext = () => {
+    return useContext(AppContext);
+    //  const myname = useContext(AppContext) ai line er poriborte oi last part bosbe;
+};
+
+export { AppProvider, AppContext, useProductContext };
