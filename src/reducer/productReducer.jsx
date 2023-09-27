@@ -1,11 +1,7 @@
 import React from 'react';
 
-const productReducer = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+const productReducer = (state,action) => {
+    return state;
 };
 
 export default productReducer;
