@@ -10,11 +10,13 @@ const FetureProducts = () => {
     return <div>...Loading</div>
   }
   return (
-    <div>
+    <div className="featureproduct-main mt-12 mb-12">
       <div className="container m-auto">
-        <h2>Check Now!</h2>
-        <h1 className="text-2xl ">Feture Products</h1>
-        <div className="grid grid-cols-3">
+        <div  className='text-black mb-5'>
+          <h2>Check Now!</h2>
+          <h1 className="text-2xl ">Feture Products</h1>
+        </div>
+        <div className="grid grid-cols-3 gap-5">
           {featureProducts.map((featureProduct) => (
             <Product
               key={featureProduct.id}

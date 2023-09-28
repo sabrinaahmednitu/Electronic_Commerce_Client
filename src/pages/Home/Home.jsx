@@ -6,12 +6,12 @@ import FeatureComp from '../../components/Home/FeatureProducts/FetureProducts';
 
 const Home = () => {
     return (
-        <div>
-            <HeroComp></HeroComp>
-            <ServicesComp></ServicesComp>
-            <FeatureComp></FeatureComp>
-           <TrustedComp></TrustedComp>
-        </div>
+      <div>
+        <HeroComp></HeroComp>
+        <FeatureComp></FeatureComp>
+        <ServicesComp></ServicesComp>
+        <TrustedComp></TrustedComp>
+      </div>
     );
 };
 
