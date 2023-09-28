@@ -8,7 +8,6 @@ const productReducer = (state, action) => {
     //     }; 
     // }
 
-
     // if (action.type === 'API_ERROR') {
     //      return {
     //        ...state,
