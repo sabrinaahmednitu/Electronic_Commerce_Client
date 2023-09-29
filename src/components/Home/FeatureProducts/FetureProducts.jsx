@@ -16,7 +16,7 @@ const FetureProducts = () => {
           <h2>Check Now!</h2>
           <h1 className="text-2xl ">Feture Products</h1>
         </div>
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5">
           {featureProducts.map((featureProduct) => (
             <Product
               key={featureProduct.id}

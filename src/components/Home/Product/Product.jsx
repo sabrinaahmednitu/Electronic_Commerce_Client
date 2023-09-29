@@ -1,20 +1,23 @@
 import React from 'react';
-import './Product.css'
+import './Product.css';
 import { Link } from 'react-router-dom';
+import FormatPrice from '../../../Helpers/FormatPrice';
 
 const Product = ({ featureProduct }) => {
   const { id, name, image, price, category } = featureProduct;
   return (
-    <div >
+    <div>
       <Link to={`/singleProduct/${id}`}>
         <div className="card">
-          <figure className='product-figure'>
+          <figure className="product-figure">
             <img src={image} alt={name} />
             <figcaption className="category">{category}</figcaption>
           </figure>
           <div className="card-data card-data-flex">
             <h1>{name}</h1>
-            <h1>{price}</h1>
+            <p >
+              <span className="text-[22px]">৳</span>{<FormatPrice price={price}></FormatPrice>}
+            </p>
           </div>
         </div>
       </Link>

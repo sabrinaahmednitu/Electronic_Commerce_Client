@@ -16,9 +16,9 @@
 .product-figure::after {
   content: '';
   position: absolute;
-  top: 0;
+  /* top: 0;
   left: 0;
-  width: 0%;
+  width: 0%; */
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   transition: all 0.2s linear;
@@ -30,7 +30,7 @@
 .product-figure:hover img {
   transform: scale(1.2);
 }
-img {
+.product-figure img {
   max-width: 90%;
   margin-top: 1.5rem;
   height: 20rem;
@@ -54,6 +54,9 @@ img {
 }
     .card-data {
       padding: 0 2rem;
+    }
+    .card-data p{
+     color: rgb(81, 81, 252);
     }
 
     .card-data-flex {
