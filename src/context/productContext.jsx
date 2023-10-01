@@ -2,20 +2,20 @@ import axios from 'axios';
 import { createContext, useContext, useEffect, useReducer } from 'react';
 import reducer from '../reducer/productReducer';
 
-
 const AppContext = createContext();
 
-const API = "https://api.pujakaitem.com/api/products";
+const API = 'https://api.pujakaitem.com/api/products';
 
 const initialState = {
   isLoading: false,
   isError: false,
   products: [],
+  //onk data akta array te chilo []
   featureProducts: [],
   isSingleLoading: false,
-  singleProduct:{}
+  singleProduct: {},
+  //sudhu single product tai {object debo}
 };
-
 
 //delivery man
 const AppProvider = ({ children }) => {
@@ -35,7 +35,6 @@ const AppProvider = ({ children }) => {
   };
   //my 1st api call for products
 
-
   //my second api call for single products
   const getSingleProduct = async (url) => {
     dispatch({ type: 'SET_SINGLE_LOADING' });
@@ -54,7 +53,7 @@ const AppProvider = ({ children }) => {
   }, []);
 
   return (
-    <AppContext.Provider value={{ ...state, getSingleProducts }}>
+    <AppContext.Provider value={{ ...state, getSingleProduct}}>
       {children}
     </AppContext.Provider>
   );
@@ -62,8 +61,8 @@ const AppProvider = ({ children }) => {
 
 //custom hook
 const useProductContext = () => {
-    return useContext(AppContext);
-    //  const myname = useContext(AppContext) ai line er poriborte oi last part bosbe;
+  return useContext(AppContext);
+  //  const myname = useContext(AppContext) ai line er poriborte oi last part bosbe;
 };
 
 export { AppProvider, AppContext, useProductContext };
