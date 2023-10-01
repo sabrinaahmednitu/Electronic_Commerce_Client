@@ -19,6 +19,7 @@ const initialState = {
 
 //delivery man
 const AppProvider = ({ children }) => {
+  //const [count,setCount]=useState([])
   const [state, dispatch] = useReducer(reducer, initialState);
 
   //my 1st api call for products

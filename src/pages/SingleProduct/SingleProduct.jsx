@@ -1,11 +1,13 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 const SingleProduct = () => {
-    return (
-      <div>
-        <h1>SingleProduct</h1>
-      </div>
-    );
+  const { id } = useParams();
+  return (
+    <div>
+      <h1>SingleProduct { id}</h1>
+    </div>
+  );
 };
 
 export default SingleProduct;
