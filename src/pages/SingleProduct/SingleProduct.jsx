@@ -5,14 +5,15 @@ import { useProductContext } from '../../context/productContext';
 const SingleProduct = () => {
   const { id } = useParams();
   const { getSingleProduct, isSingleLoading, singleProduct } = useProductContext();
-console.log(singleProduct);
+const {name,company,price,description,category,stock,stars,reviews}=singleProduct;
   useEffect(() => {
     getSingleProduct(`https://api.pujakaitem.com/api/products?id=${id}`);
   }, []);
 
   return (
     <div>
-      <h1>SingleProduct { id}</h1>
+      <h1>SingleProduct {name}</h1>
+      <h1>SingleProduct {company}</h1>
     </div>
   );
 };
