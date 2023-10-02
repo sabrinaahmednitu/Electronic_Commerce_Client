@@ -16,7 +16,7 @@ const Product = ({ featureProduct }) => {
           <div className="card-data card-data-flex">
             <h1>{name}</h1>
             <p >
-              <span className="text-[22px]">৳</span>{<FormatPrice price={price}></FormatPrice>}
+              {<FormatPrice price={price}></FormatPrice>}
             </p>
           </div>
         </div>

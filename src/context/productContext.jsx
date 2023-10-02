@@ -12,7 +12,6 @@ const initialState = {
   products: [],
   //onk data akta array te chilo []
   featureProducts: [],
-  isSingleLoading: false,
   singleProduct: {},
   //sudhu single product tai {object debo}
 };
