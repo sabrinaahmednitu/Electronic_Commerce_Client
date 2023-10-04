@@ -4,7 +4,8 @@ import PageNavigation from '../../components/SingleProduct/PageNavigation';
 import SingleImage from '../../components/SingleProduct/SingleImage';
 import { useProductContext } from '../../context/productContext';
 import FormatPrice from '../../Helpers/FormatPrice';
-import {TbTruckDelivery} from "react-icons/tb"
+import { TbTruckDelivery, TbReplace} from 'react-icons/tb';
+
 
 const SingleProduct = () => {
 const { id } = useParams();
@@ -25,19 +26,19 @@ const {name,image,company,price,description,category,stock,stars,reviews}=single
       <section className="container mx-auto max-w-xl">
         <div className="grid grid-cols-2">
           <div className="product_image">
-            <SingleImage images={image}></SingleImage>
+            <SingleImage imgs={image}></SingleImage>
           </div>
-          <div className="product_data">
-            <h1>{name} </h1>
+          <div className="product_data text-black">
+            <h1 className='text-3xl'>{name} </h1>
             <p>{stars}</p>
-            <p>{reviews}</p>
+            <p>{reviews} Reviews </p>
             <p className="product-price">
               BDT :{' '}
               <del>
                 <FormatPrice price={price + 250000}></FormatPrice>
               </del>
             </p>
-            <p className="product-real-price">
+            <p className="product-real-price font-bold text-indigo-500">
               Deal of the Day : <FormatPrice price={price}></FormatPrice>
             </p>
             <h1>{description}</h1>
@@ -47,18 +48,33 @@ const {name,image,company,price,description,category,stock,stars,reviews}=single
                 <p>Free Delivery</p>
               </div>
               <div className="warrenty-data">
-                <TbTruckDelivery className="text-3xl"></TbTruckDelivery>
+                <TbReplace className="text-3xl"></TbReplace>
                 <p>Free Delivery</p>
               </div>
               <div className="warrenty-data">
                 <TbTruckDelivery className="text-3xl"></TbTruckDelivery>
-                <p>Free Delivery</p>
+                <p>Your Delivery</p>
               </div>
               <div className="warrenty-data">
-                <TbTruckDelivery className="text-3xl"></TbTruckDelivery>
-                <p>Free Delivery</p>
+                {/* <MdSecurity className="text-3xl"></MdSecurity> */}
+                <p>Year Warranty</p>
               </div>
             </div>
+            <hr />
+
+            <div className="product-data-info">
+              <p>
+                Available :{' '}
+                <span className="font-bold">
+                  {stock > 0 ? 'In Stock' : 'Not Availavle'}
+                </span>{' '}
+              </p>
+              <p>
+                Brand : <span className="font-bold">{company}</span>
+              </p>
+            </div>
+            <hr />
+            
           </div>
         </div>
       </section>

@@ -1,12 +1,13 @@
 import React from 'react';
 
-const SingleImage = () => {
-    // const { image } = images;
+const SingleImage = ({ imgs }) => {
+    console.log(imgs);
     return (
-        <div>
-            <h1>image </h1>
-        </div>
+      <div>
+        <h1>images</h1>
+       
+      </div>
     );
 };
 
-export default SingleImage;
+export default SingleImage; 
