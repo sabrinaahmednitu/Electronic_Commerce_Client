@@ -23,7 +23,7 @@ const {name,image,company,price,description,category,stock,stars,reviews}=single
     <div>
       <PageNavigation title={name}></PageNavigation>
 
-      <section className="container mx-auto max-w-xl">
+      <section className="container mx-auto max-w-5xl">
         <div className="grid grid-cols-2">
           <div className="product_image">
             <SingleImage imgs={image}></SingleImage>
