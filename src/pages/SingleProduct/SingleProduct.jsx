@@ -5,6 +5,7 @@ import SingleImage from '../../components/SingleProduct/SingleImage';
 import { useProductContext } from '../../context/productContext';
 import FormatPrice from '../../Helpers/FormatPrice';
 import { TbTruckDelivery, TbReplace} from 'react-icons/tb';
+import Stars from '../../components/SingleProduct/Stars';
 
 
 const SingleProduct = () => {
@@ -29,9 +30,8 @@ const {name,image,company,price,description,category,stock,stars,reviews}=single
             <SingleImage imgs={image}></SingleImage>
           </div>
           <div className="product_data text-black">
-            <h1 className='text-3xl'>{name} </h1>
-            <p>{stars}</p>
-            <p>{reviews} Reviews </p>
+            <h1 className="text-3xl">{name} </h1>
+            <Stars stars={stars} reviews={reviews}></Stars>
             <p className="product-price">
               BDT :{' '}
               <del>
@@ -74,7 +74,6 @@ const {name,image,company,price,description,category,stock,stars,reviews}=single
               </p>
             </div>
             <hr />
-            
           </div>
         </div>
       </section>
