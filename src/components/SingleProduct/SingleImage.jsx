@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const SingleImage = ({ imgs=[{ url: " " }] }) => {
   const [mainImage, setMainImage] = useState(imgs[0]);
     return (
-      <div className="flex gap-5 items-center justify-center">
+      <div className="flex gap-5 items-center justify-center mt-16">
         <div className="flex flex-col gap-5">
           {imgs?.map((img, index) => (
             <img

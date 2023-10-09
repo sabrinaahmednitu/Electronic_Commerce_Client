@@ -5,8 +5,8 @@ import SingleImage from '../../components/SingleProduct/SingleImage';
 import { useProductContext } from '../../context/productContext';
 import FormatPrice from '../../Helpers/FormatPrice';
 import { TbTruckDelivery, TbReplace} from 'react-icons/tb';
-import Stars from '../../components/SingleProduct/Stars';
-
+import Stars from '../../components/SingleProduct/star/Stars';
+import './SingleProduct.css';
 
 const SingleProduct = () => {
 const { id } = useParams();
@@ -25,24 +25,24 @@ const {name,image,company,price,description,category,stock,stars,reviews}=single
       <PageNavigation title={name}></PageNavigation>
 
       <section className="container mx-auto max-w-5xl">
-        <div className="grid grid-cols-2">
+        <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
           <div className="product_image">
             <SingleImage imgs={image}></SingleImage>
           </div>
-          <div className="product_data text-black">
-            <h1 className="text-3xl">{name} </h1>
+          <div className="product_data text-black p-5">
+            <h1 className="text-4xl mb-3">{name} </h1>
             <Stars stars={stars} reviews={reviews}></Stars>
-            <p className="product-price">
+            <p className="product-price mt-3 mb-3">
               BDT :{' '}
               <del>
                 <FormatPrice price={price + 250000}></FormatPrice>
               </del>
             </p>
-            <p className="product-real-price font-bold text-indigo-500">
+            <p className="product-real-price font-bold text-indigo-500 mb-3">
               Deal of the Day : <FormatPrice price={price}></FormatPrice>
             </p>
             <h1>{description}</h1>
-            <div className="product-data-warranty flex">
+            <div className="product-data-warranty flex mt-5 mb-5">
               <div className="warrenty-data">
                 <TbTruckDelivery className="text-3xl"></TbTruckDelivery>
                 <p>Free Delivery</p>
@@ -62,7 +62,7 @@ const {name,image,company,price,description,category,stock,stars,reviews}=single
             </div>
             <hr />
 
-            <div className="product-data-info">
+            <div className="product-data-info mt-4 mb-4">
               <p>
                 Available :{' '}
                 <span className="font-bold">
