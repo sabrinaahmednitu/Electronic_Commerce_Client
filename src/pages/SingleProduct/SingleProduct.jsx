@@ -7,6 +7,7 @@ import FormatPrice from '../../Helpers/FormatPrice';
 import { TbTruckDelivery, TbReplace} from 'react-icons/tb';
 import Stars from '../../components/SingleProduct/star/Stars';
 import './SingleProduct.css';
+import AddToCart from '../../components/AddToCart';
 
 const SingleProduct = () => {
 const { id } = useParams();
@@ -74,6 +75,7 @@ const {name,image,company,price,description,category,stock,stars,reviews}=single
               </p>
             </div>
             <hr />
+            {stock > 0 && <AddToCart singleProduct={singleProduct}></AddToCart>}
           </div>
         </div>
       </section>
