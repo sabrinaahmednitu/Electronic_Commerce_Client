@@ -8,7 +8,7 @@ const AddToCart = ({ singleProduct }) => {
                 <p>
                     Color : {colors.map((color, index) => <button style={{ backgroundColor: color}}
                         className='rounded-[50%] ml-3' key={index}>
-                           {color}
+                          
                         </button>
                     )}
                 </p>
