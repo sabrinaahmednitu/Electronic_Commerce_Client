@@ -7,7 +7,8 @@ import FormatPrice from '../../Helpers/FormatPrice';
 import { TbTruckDelivery, TbReplace} from 'react-icons/tb';
 import Stars from '../../components/SingleProduct/star/Stars';
 import './SingleProduct.css';
-import AddToCart from '../../components/AddToCart';
+import AddToCart from '../../components/SingleProduct/AddToCart/AddToCart';
+
 
 const SingleProduct = () => {
 const { id } = useParams();
