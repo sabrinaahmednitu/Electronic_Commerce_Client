@@ -2,6 +2,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 15px;
   }
 
 .btnStyle {
@@ -25,5 +26,5 @@
   }
     .checkStyle {
     color: #fff;
-    
+    margin-left: 5px;
   }

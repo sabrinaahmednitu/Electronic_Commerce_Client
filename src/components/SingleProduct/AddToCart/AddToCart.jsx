@@ -5,7 +5,7 @@ import { FaCheck } from "react-icons/fa";
 const AddToCart = ({ singleProduct }) => {
 
     const { id, colors, stock } = singleProduct;
-    const [NewColor, setNewColor] = useState(colors[0]);
+    const [currentColor, setCurrentColor] = useState(colors[0]);
 
     return (
       <div>
@@ -16,12 +16,12 @@ const AddToCart = ({ singleProduct }) => {
               <button
                 key={index}
                 style={{ backgroundColor: color }}
-                className={NewColor === color ? 'btnStyle active' : 'btnStyle'}
-                onClick={() => setNewColor(NewColor)}
+                className={
+                  currentColor === color ? 'btnStyle active' : 'btnStyle'
+                }
+                onClick={()=>setCurrentColor(color)}
               >
-                {NewColor === color ? (
-                  <FaCheck className="checkStyle"></FaCheck>
-                ) : null}
+                {currentColor===color?<FaCheck className='checkStyle'></FaCheck>:null}
               </button>
             ))}
           </p>
