@@ -5,6 +5,7 @@ align-items: center;
 gap: 2px;
 }
 .icon{
-  color: rgb(251, 71, 6);
+  /* color: rgb(251, 71, 6); */
+  color: rgb(251, 6, 88);
 }
 
