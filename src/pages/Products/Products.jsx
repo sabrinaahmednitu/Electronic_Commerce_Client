@@ -2,13 +2,11 @@ import FilterSection from '../../components/Product/FilterSection/FilterSection'
 import ProductList from '../../components/Product/ProductList/ProductList';
 import Sort from '../../components/Product/Sort/Sort';
 import { useProductContext } from '../../context/productContext';
-
+import './Products.css'
 const Products = () => {
-  const { myName } = useProductContext();
   return (
     <div>
-      {myName}
-      <div className="container grid-filter-column">
+      <div className=" grid-filter-column">
         {/*-------- section 1 --------*/}
         <section>
           <FilterSection></FilterSection>
