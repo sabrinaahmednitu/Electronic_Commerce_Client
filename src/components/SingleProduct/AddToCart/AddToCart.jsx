@@ -1,12 +1,22 @@
 import React, { useState } from 'react';
 import './AddToCart.css';
 import { FaCheck } from "react-icons/fa";
+import CartAmountToggle from '../CartAmountToggle/CartAmountToggle';
+import { NavLink } from 'react-router-dom';
 
 const AddToCart = ({ singleProduct }) => {
 
     const { id, colors, stock } = singleProduct;
     const [currentColor, setCurrentColor] = useState(colors[0]);
-
+    const[amount,setAmount]=useState(1)
+  
+  const setIncrease = () => {
+    amount < stock ? setAmount(amount + 1) : setAmount(stock);
+  };
+  const setDecrease = () => {
+    amount > 1 ? setAmount(amount - 1) : setAmount(1);
+  };
+  
     return (
       <div>
         <div className="colors">
@@ -26,6 +36,19 @@ const AddToCart = ({ singleProduct }) => {
             ))}
           </p>
         </div>
+
+        <hr  />
+        {/* add to cart */}
+        <CartAmountToggle
+          amount={amount}
+          setDecrease={setDecrease}
+          setIncrease={setIncrease}
+        ></CartAmountToggle>
+
+
+        <NavLink to="/cart">
+          <button className='addButton' >Add To Cart</button>
+        </NavLink>
       </div>
     );
 };

@@ -3,6 +3,7 @@
     justify-content: flex-start;
     align-items: center;
     margin-top: 15px;
+    margin-bottom: 15px;
   }
 
 .btnStyle {
@@ -27,4 +28,10 @@
     .checkStyle {
     color: #fff;
     margin-left: 5px;
+  }
+
+  .addButton{
+    background-color: rgb(81, 115, 226);
+    color: white;
+    padding: 10px 25px;
   }
