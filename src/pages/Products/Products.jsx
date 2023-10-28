@@ -21,7 +21,7 @@ const Products = () => {
           </div>
           {/* section2 (part 2) */}
           <div className="main-product">
-            <ProductList></ProductList>
+           
           </div>
         </section>
      
