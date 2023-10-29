@@ -1,10 +1,11 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 import { useProductContext } from "./productContext";
+import reducer from '../reducer/filterReducer';
 
 const FilterContext = createContext();
 
 const initialState = {
-    filter_products: [...products],
+    filter_products: [],
     all_products:[]
 }
 
@@ -15,11 +16,11 @@ export const FilterContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState);
 
     useEffect(() => {
-        dispatch({type:"LOAD_FILTER_PRODUCTS" , payload:products})
-    },[])
+      dispatch({ type: 'LOAD_FILTER_PRODUCTS', payload: products });
+    }, [products]);
 
     return (
-        <FilterContext.Provider value={...state} >
+        <FilterContext.Provider value={{...state}} >
             {children}
         </FilterContext.Provider>
     );
