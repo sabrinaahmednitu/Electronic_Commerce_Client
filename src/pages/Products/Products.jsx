@@ -1,9 +1,12 @@
 import FilterSection from '../../components/Product/FilterSection/FilterSection';
 import ProductList from '../../components/Product/ProductList/ProductList';
 import Sort from '../../components/Product/Sort/Sort';
+import { useFilterContext } from '../../context/filterContext';
 import './Products.css';
 
 const Products = () => {
+  const { filter_products } = useFilterContext();
+  // console.log(filter_products);
   return (
     <div>
       <div className=" grid-filter-column">
