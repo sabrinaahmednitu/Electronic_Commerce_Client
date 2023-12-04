@@ -4,7 +4,7 @@ import FormatPrice from '../../../Helpers/FormatPrice';
 import './GridView.css';
 
 const GridView = ({ products }) => {
-    console.log("grid view products",products)
+    // console.log("grid view products",products)
     return (
         <div>
             <div className="container grid lg:grid-cols-3 md:grid-cols-2 ">

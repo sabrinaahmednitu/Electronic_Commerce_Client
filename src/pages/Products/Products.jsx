@@ -8,7 +8,7 @@ const Products = () => {
   const { filter_products } = useFilterContext();
   // console.log(filter_products);
   return (
-    <div>
+    <div className='container mx-auto'>
       <div className=" grid-filter-column">
         {/*-------- section 1 --------*/}
         <section>
