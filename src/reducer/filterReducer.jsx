@@ -22,10 +22,49 @@ const filterReducer = (state, action) => {
     case 'GET_SORT_VALUE':
       let userSortValue = document.getElementById('sort');
       let sort_value = userSortValue.options[userSortValue.selectedIndex].value;
-    console.log(sort_value);
+      console.log(sort_value);
       return {
         ...state,
         sorting_value: sort_value,
+      };
+
+    case 'SORTING_PRODUCTS':
+      let newSortData;
+      let tempSortProduct = [...action.payload];
+
+      //for lowest price
+      if (state.sorting_value === 'lowest') {
+        const sortingProducts = (a, b) => {
+          return a.price - b.price;
+        };
+        newSortData = tempSortProduct.sort(sortingProducts);
+      }
+
+      //for highest price
+      if (state.sorting_value === "highest") {
+        const sortingProducts = (a, b)=>{
+          return b.price - a.price;
+        };
+        newSortData = tempSortProduct.sort(sortingProducts);
+      }
+
+      //for a-z
+      if (state.sorting_value === 'a-z') {
+        newSortData = tempSortProduct.sort((a, b) =>
+          a.name.localeCompare(b.name)
+        );
+      }
+
+      //for z-a
+      if (state.sorting_value === 'z-a') {
+        newSortData = tempSortProduct.sort((a, b) =>
+          b.name.localeCompare(a.name)
+        );
+      }
+
+      return {
+        ...state,
+        filter_products: newSortData,
       };
 
     default:
