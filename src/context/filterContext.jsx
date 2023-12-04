@@ -7,8 +7,8 @@ const FilterContext = createContext();
 const initialState = {
     filter_products: [],
     all_products: [],
-    grid_view:false, //list view
-    // grid_view:true, //grid view
+    //grid_view:false, //list view
+    grid_view:true, //grid view
 }
 
 export const FilterContextProvider = ({ children }) => {

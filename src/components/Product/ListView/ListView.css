@@ -1,15 +1,16 @@
 .list-container {
-  max-width: 900px;
+  max-width: 800px;
   margin: auto;
+  margin-top: 30px;
 }
-figure {
+.listview-card figure {
   display: flex;
   justify-content: center;
   align-items: center;
   width: auto;
   position: relative;
 }
-figure::after {
+.listview-card figure::after {
   content: ' ';
   position: absolute;
   top: 0;
@@ -20,14 +21,14 @@ figure::after {
   cursor: pointer;
   transition: 0.2s linear;
 }
-figure:hover::after {
+.listview-card figure:hover::after {
   width: 100%;
 }
-figure:hover img{
-    transform: scale(1.2);
+.listview-card figure:hover img{
+    transform: scale(1.1);
 }
 
-figure img{
+.listview-card figure img{
     max-width: 90%;
     height: 100%;
     transition: 0.2s;
@@ -79,12 +80,22 @@ figure img{
     }
   
 
- @media only screen and (max-width: 600px) {
+ @media only screen and (max-width: 557px) {
+   .list-container {
+  max-width: 300px;}
      .listview-card {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   border: 1px solid rgb(230, 224, 224);
   margin-bottom: 25px;
   padding: 15px 0px;
+}
+.listview-card figure img{
+    max-width: 90%;
+    height: 100%;
+    transition: 0.2s;
+}
+.listview-card figure:hover::after {
+  width: 100%;
 }
  }

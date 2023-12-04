@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Footer.css'
 
 const Footer = () => {
   return (
     <div>
       <section className="z-10">
-        <div className="footer-short max-w-4xl m-auto py-12 px-5 bg-[#BEADFA] bg-[#f472b6] text-white rounded-lg translate-y-[65px] ">
+        <div className="footer-short max-w-4xl m-auto py-12 px-5 bg-[#BEADFA] text-white rounded-lg translate-y-[65px] ">
+        {/* <div className="footer-short max-w-4xl m-auto py-12 px-5 bg-[#BEADFA] bg-[#f472b6] text-white rounded-lg translate-y-[65px] "> */}
           <div className="grid grid-cols-2 gap-5">
             <div>
               <h3>Ready to get started ? </h3>
@@ -20,8 +22,8 @@ const Footer = () => {
         </div>
       </section>
 
-      <section className="bg-[#e6e7eb] z-1">
-        <footer className="footer container mx-auto p-10 text-black pt-24">
+      <section className="main-footer z-1" >
+        <footer className="footer container mx-auto p-10  pt-24">
           <nav>
             <header className="footer-title">Get to Know Us</header>
             <a className="link link-hover">Careers</a>

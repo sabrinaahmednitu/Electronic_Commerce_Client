@@ -1,0 +1,18 @@
+.sorting-section{
+    display: flex;
+    justify-content: space-between;
+  margin-top: 30px;
+
+}
+
+.sort-btn{
+ font-size: 20px;
+ margin-left: 15px;
+ color: rgb(236, 22, 122);
+ background-color: rgb(221, 211, 210);
+ padding: 10px;
+}
+.active{
+background-color: black;
+color: white;
+}
