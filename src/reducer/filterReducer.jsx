@@ -32,7 +32,7 @@ const filterReducer = (state, action) => {
       let newSortData;
       let tempSortProduct = [...action.payload];
 
-      //for lowest price
+      //for lowest price sort
       if (state.sorting_value === 'lowest') {
         const sortingProducts = (a, b) => {
           return a.price - b.price;
@@ -40,7 +40,7 @@ const filterReducer = (state, action) => {
         newSortData = tempSortProduct.sort(sortingProducts);
       }
 
-      //for highest price
+      //for highest price sorting
       if (state.sorting_value === "highest") {
         const sortingProducts = (a, b)=>{
           return b.price - a.price;
@@ -48,14 +48,14 @@ const filterReducer = (state, action) => {
         newSortData = tempSortProduct.sort(sortingProducts);
       }
 
-      //for a-z
+      //for a-z sorting
       if (state.sorting_value === 'a-z') {
         newSortData = tempSortProduct.sort((a, b) =>
           a.name.localeCompare(b.name)
         );
       }
 
-      //for z-a
+      //for z-a sorting
       if (state.sorting_value === 'z-a') {
         newSortData = tempSortProduct.sort((a, b) =>
           b.name.localeCompare(a.name)
