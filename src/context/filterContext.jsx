@@ -5,8 +5,8 @@ import reducer from '../reducer/filterReducer';
 const FilterContext = createContext();
 
 const initialState = {
-  filter_products: [],
-  all_products: [],
+  filter_products: [], //its for grid and list
+  all_products: [], //for filter section
   //grid_view:false, //list view
   grid_view: true, //grid view
   sorting_value: 'lowest',
