@@ -8,3 +8,20 @@
    border-radius: 5px;
    
 }
+.filter-category h4{
+    text-align: start;
+    margin: 15px 0px;
+    font-size: 18px;
+    color: rgb(59, 56, 56);
+}
+
+.filter-category button{
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+.category-name{
+display: flex;
+align-items: left;
+flex-direction: column;
+}
