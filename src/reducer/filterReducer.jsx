@@ -19,52 +19,83 @@ const filterReducer = (state, action) => {
         grid_view: false,
       };
 
+    //------------for sorting start--------------
     case 'GET_SORT_VALUE':
       // let userSortValue = document.getElementById('sort');
       // let sort_value = userSortValue.options[userSortValue.selectedIndex].value;
       return {
         ...state,
-        sorting_value: action.payload ,
+        sorting_value: action.payload,
       };
 
     case 'SORTING_PRODUCTS':
       let newSortData;
-      let tempSortProduct = [...action.payload];
+      // let tempSortProduct = [...action.payload];
+
+      const { filter_products } = state;
+      let tempSortProduct = [...filter_products];
+
+
+
+      const sortingProducts = (a, b) => {
+        //for lowest price sort
+        if (state.sorting_value === 'lowest') {
+          return a.price - b.price;
+        }
+
+         //for highest price sorting
+        if (state.sorting_value === 'highest') {
+            return b.price - a.price;
+        }
+        //for a-z sorting
+        if (state.sorting_value === 'a-z') { 
+          return a.name.localeCompare(b.name);
+        }
+         //for z-a sorting
+        if (state.sorting_value === 'z-a') { 
+          return b.name.localeCompare(a.name);
+        }
+      };
+
 
       //for lowest price sort
-      if (state.sorting_value === 'lowest') {
-        const sortingProducts = (a, b) => {
-          return a.price - b.price;
-        };
-        newSortData = tempSortProduct.sort(sortingProducts);
-      }
+      // if (state.sorting_value === 'lowest') {
+      //   const sortingProducts = (a, b) => {
+      //     return a.price - b.price;
+      //   };
+       
+      // }
 
       //for highest price sorting
-      if (state.sorting_value === "highest") {
-        const sortingProducts = (a, b)=>{
-          return b.price - a.price;
-        };
-        newSortData = tempSortProduct.sort(sortingProducts);
-      }
+      // if (state.sorting_value === 'highest') {
+      //   const sortingProducts = (a, b) => {
+      //     return b.price - a.price;
+      //   };
+       
+      // }
 
       //for a-z sorting
-      if (state.sorting_value === 'a-z') {
-        newSortData = tempSortProduct.sort((a, b) =>
-          a.name.localeCompare(b.name)
-        );
-      }
+      // if (state.sorting_value === 'a-z') {
+      //   newSortData = tempSortProduct.sort((a, b) =>
+      //     a.name.localeCompare(b.name)
+      //   );
+      // }
 
       //for z-a sorting
-      if (state.sorting_value === 'z-a') {
-        newSortData = tempSortProduct.sort((a, b) =>
-          b.name.localeCompare(a.name)
-        );
-      }
+      // if (state.sorting_value === 'z-a') {
+      //   newSortData = tempSortProduct.sort((a, b) =>
+      //     b.name.localeCompare(a.name)
+      //   );
+      // }
+
+       newSortData = tempSortProduct.sort(sortingProducts);
 
       return {
         ...state,
         filter_products: newSortData,
       };
+
+    //----------for sorting end-------------
 
     default:
       return state;
