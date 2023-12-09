@@ -35,35 +35,32 @@ const filterReducer = (state, action) => {
       const { filter_products } = state;
       let tempSortProduct = [...filter_products];
 
-
-
       const sortingProducts = (a, b) => {
         //for lowest price sort
         if (state.sorting_value === 'lowest') {
           return a.price - b.price;
         }
 
-         //for highest price sorting
+        //for highest price sorting
         if (state.sorting_value === 'highest') {
-            return b.price - a.price;
+          return b.price - a.price;
         }
         //for a-z sorting
-        if (state.sorting_value === 'a-z') { 
+        if (state.sorting_value === 'a-z') {
           return a.name.localeCompare(b.name);
         }
-         //for z-a sorting
-        if (state.sorting_value === 'z-a') { 
+        //for z-a sorting
+        if (state.sorting_value === 'z-a') {
           return b.name.localeCompare(a.name);
         }
       };
-
 
       //for lowest price sort
       // if (state.sorting_value === 'lowest') {
       //   const sortingProducts = (a, b) => {
       //     return a.price - b.price;
       //   };
-       
+
       // }
 
       //for highest price sorting
@@ -71,7 +68,7 @@ const filterReducer = (state, action) => {
       //   const sortingProducts = (a, b) => {
       //     return b.price - a.price;
       //   };
-       
+
       // }
 
       //for a-z sorting
@@ -88,7 +85,7 @@ const filterReducer = (state, action) => {
       //   );
       // }
 
-       newSortData = tempSortProduct.sort(sortingProducts);
+      newSortData = tempSortProduct.sort(sortingProducts);
 
       return {
         ...state,
@@ -96,6 +93,34 @@ const filterReducer = (state, action) => {
       };
 
     //----------for sorting end-------------
+
+    //--------------search part--------------
+    case 'UPDATE_FILTERS_VALUE':
+      const { name, value } = action.payload;
+      return {
+        ...state,
+        filters: {
+          ...state.filters,
+          [name]: value,
+        },
+      };
+
+    case 'FILTER_PRODUCTS':
+      let { all_products } = state;
+      let tempFilterProduct = [...all_products];
+
+      const { text } = state.filters;
+      if (text) {
+        tempFilterProduct = tempFilterProduct.filter((curElem) => {
+          return curElem.name.toLowerCase().includes(text);
+        })
+      }
+
+       return {
+         ...state,
+         filter_products: tempFilterProduct,
+       };
+    //--------------search part end--------------
 
     default:
       return state;

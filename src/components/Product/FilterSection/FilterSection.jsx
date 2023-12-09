@@ -1,16 +1,21 @@
 import React from 'react';
+import { useFilterContext } from '../../../context/filterContext';
 
 const FilterSection = () => {
+  const {
+    filters: { text }, updateFilterValue } = useFilterContext();
     return (
       <div>
-        <h1>FilterSection </h1>
-        <h1>FilterSection </h1>
-        <h1>FilterSection </h1>
-        <h1>FilterSection </h1>
-        <h1>FilterSection </h1>
-        <h1>FilterSection </h1>
+        <div className="filter-search">
+          <form onSubmit={(e) => e.preventDefault()}>
+            <input type="text"
+              name="text"
+              name="text"
+              onChange={updateFilterValue} />
+          </form>
+       </div>
       </div>
     );
 };
 
-export default FilterSection;
+export default FilterSection; 

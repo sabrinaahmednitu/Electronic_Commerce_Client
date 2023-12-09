@@ -16,3 +16,10 @@
 background-color: black;
 color: white;
 }
+
+
+.sort-selection  select{
+  background-color: white;
+  border: 1px solid rgb(214, 188, 210);
+  outline: none;
+}
