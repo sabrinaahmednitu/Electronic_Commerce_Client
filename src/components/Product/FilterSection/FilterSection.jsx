@@ -35,23 +35,25 @@ const FilterSection = () => {
         {/* --------Category wise filter part--------- */}
         <div className="filter-category">
           <h4>Category</h4>
-          <div className='category-name'>
-            {
-              categoryOnlyData.map((curElem ,index) => {
-                return (
-                  <button
-                    key={index}
-                    type="button"
-                    name="category"
-                    value={curElem}
-                    onClick={updateFilterValue}
-                  >
-                    {curElem}
-                  </button>
-                );
-              })
-            }
+          <div className="category-name">
+            {categoryOnlyData.map((curElem, index) => {
+              return (
+                <button
+                  key={index}
+                  type="button"
+                  name="category"
+                  value={curElem}
+                  onClick={updateFilterValue}
+                >
+                  {curElem}
+                </button>
+              );
+            })}
           </div>
+        </div>
+        {/* --------Category wise filter part--------- */}
+        <div className="filter-category">
+          <h4>Company</h4>
         </div>
       </div>
     );

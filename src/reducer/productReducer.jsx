@@ -24,6 +24,7 @@ const productReducer = (state, action) => {
         isLoading: true,
       };
 
+    //products state e data assign kora action.payload dea
     case 'SET_API_DATA':
       const featureData = action.payload.filter((currentElements) => {
         return currentElements.featured === true;

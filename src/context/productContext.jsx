@@ -9,11 +9,9 @@ const API = 'https://api.pujakaitem.com/api/products';
 const initialState = {
   isLoading: false,
   isError: false,
-  products: [],
-  //onk data akta array te chilo []
-  featureProducts: [],
-  singleProduct: {},
-  //sudhu single product tai {object debo}
+  products: [], //sob product data akta array te chilo tai []
+  featureProducts: [], //sudhu feature product gulo
+  singleProduct: {}, //sudhu single product tai {object debo}
 };
 
 //delivery man
@@ -22,17 +20,16 @@ const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   //my 1st api call for products
-  const getProducts = async (url) => {
+  const getProducts = async (url) => { //API k url bole get kora hoiche
     dispatch({ type: 'SET_LOADING' });
     try {
       const res = await axios.get(url);
-      const products = await res.data;
-      dispatch({ type: 'SET_API_DATA', payload: products });
+      const products = await res.data;  //product is  data array
+      dispatch({ type: 'SET_API_DATA', payload: products }); //products data payload e pathay dechi and reducer e products state e set kore dechi
     } catch (error) {
       dispatch({ type: 'API_ERROR' });
     }
   };
-  //my 1st api call for products
 
   //my second api call for single products
   const getSingleProduct = async (url) => {
@@ -45,14 +42,14 @@ const AppProvider = ({ children }) => {
       dispatch({ type: 'SET_SINGLE_ERROR' });
     }
   };
-  //my second api call for single products
 
+  //my 1st api call for products
   useEffect(() => {
     getProducts(API);
   }, []);
 
   return (
-    <AppContext.Provider value={{ ...state, getSingleProduct}}>
+    <AppContext.Provider value={{ ...state, getSingleProduct }}>
       {children}
     </AppContext.Provider>
   );
