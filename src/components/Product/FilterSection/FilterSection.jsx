@@ -15,8 +15,8 @@ const FilterSection = () => {
   }
   
   //we need unique data
-  const categoryOnlyData = getUniqueData(all_products, "category");
-  
+  const categoryOnlyData = getUniqueData(all_products, "category");//data and category pass kore dawa props hisabe
+  const companyData = getUniqueData(all_products, "company");
     return (
       <div>
         {/* --------search part--------- */}
@@ -24,7 +24,6 @@ const FilterSection = () => {
           <form onSubmit={(e) => e.preventDefault()}>
             <input
               type="text"
-              name="text"
               name="text"
               onChange={updateFilterValue}
               placeholder="Search"
@@ -54,6 +53,24 @@ const FilterSection = () => {
         {/* --------Category wise filter part--------- */}
         <div className="filter-category">
           <h4>Company</h4>
+          <div className="company-name">
+            <form action="#">
+              <select name="company"
+                id="company"
+                className='filter-company-select'
+                onClick={updateFilterValue}>
+                {
+                  companyData.map((curElem,index) => {
+                    return (
+                      <option key={index} value={curElem} name="company">
+                        {curElem}
+                      </option>
+                    )
+                  })
+                }
+                </select>
+            </form>
+          </div>
         </div>
       </div>
     );
