@@ -10,7 +10,7 @@ const FilterSection = () => {
     let newValue = data.map((curElem) => {
       return curElem[property];
     });
-    return (newValue = ['All', ...new Set(newValue)]); //unique value asbe
+    return (newValue = ['all', ...new Set(newValue)]); //unique value asbe
 
     //["all" , ...new Set(newValue)]
     // console.log(newValue);
