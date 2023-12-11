@@ -109,15 +109,20 @@ const filterReducer = (state, action) => {
       let { all_products } = state;
       let tempFilterProduct = [...all_products];
 
-      const { text , category } = state.filters;
+      const { text , category ,company} = state.filters;
       if (text) {
         tempFilterProduct = tempFilterProduct.filter((curElem) => {
           return curElem.name.toLowerCase().includes(text);
         })
       }
-      if (category) {
+      // if (category) {
+      //   tempFilterProduct = tempFilterProduct.filter((curElem) => {
+      //      return curElem.category === category;
+      //   });
+      // }
+      if (company) {
         tempFilterProduct = tempFilterProduct.filter((curElem) => {
-          return curElem.category === category;
+           return curElem.company.toLowerCase() === company.toLowerCase();
         });
       }
 

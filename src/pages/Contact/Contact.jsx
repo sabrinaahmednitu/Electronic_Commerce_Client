@@ -5,32 +5,9 @@ const Contact = () => {
   return (
     <div>
       <div className="container mx-auto mt-12 mb-12">
-        <h2 className="text-2xl text-black text-center mb-3">
+        <h2 className="text-2xl text-black text-center mb-5">
           Feel Free To Contact
         </h2>
-        {/* <section className="location-section">
-          <div className="location-text">
-            <form
-              action="https://formspree.io/f/xwkdndpq"
-              method="POST"
-              className="contact-form w-[100%]"
-            >
-              <input type="text" placeholder="username" name="username" />
-              <input type="text" placeholder="Email" name="Email" />
-              <textarea
-                name=""
-                id=""
-                cols="20"
-                rows="7"
-                placeholder="Place your comment here"
-              ></textarea>
-              <button className="btn bg-indigo-400">Submit</button>
-            </form>
-          </div>
-          <div className="location-map">
-            <img src={contact} width="550" height="150"></img>
-          </div>
-        </section> */}
         <section className="contact-form-section mt-12 mb-12">
           <div className="contact-img">
             <img src={contact} alt="" />

@@ -1,14 +1,14 @@
 .filter-search{
     margin-top: 40px;
 }
-.filter-search input{
+.filter-search input, .filter-company-select{
    background-color: transparent;
    border: 1px solid rgb(226, 201, 201);
    outline: none;
    border-radius: 5px;
    
 }
-.filter-category h4{
+.filter-category h4  ,.filter-company h4{
     text-align: start;
     margin: 15px 0px;
     font-size: 18px;
@@ -25,3 +25,7 @@ display: flex;
 align-items: left;
 flex-direction: column;
 }
+
+/* .filter-company-select button {
+display: flex;
+} */

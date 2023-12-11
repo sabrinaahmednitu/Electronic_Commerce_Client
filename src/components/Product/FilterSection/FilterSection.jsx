@@ -10,7 +10,9 @@ const FilterSection = () => {
     let newValue = data.map((curElem) => {
       return curElem[property];
     });
-    return newValue = ["All" , ...new Set(newValue)] //unique value asbe
+    return (newValue = ['All', ...new Set(newValue)]); //unique value asbe
+
+    //["all" , ...new Set(newValue)]
     // console.log(newValue);
   }
   
@@ -50,8 +52,8 @@ const FilterSection = () => {
             })}
           </div>
         </div>
-        {/* --------Category wise filter part--------- */}
-        <div className="filter-category">
+        {/* --------Company wise filter part--------- */}
+        <div className="filter-company">
           <h4>Company</h4>
           <div className="company-name">
             <form action="#">
