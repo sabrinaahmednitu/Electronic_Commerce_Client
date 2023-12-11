@@ -3,7 +3,7 @@ import { useFilterContext } from '../../../context/filterContext';
 import './FilterSection.css';
 const FilterSection = () => {
   const {
-    filters: { text, category },
+    filters: { text, category ,colors },
     updateFilterValue,
     all_products,
   } = useFilterContext();
@@ -83,6 +83,23 @@ const FilterSection = () => {
           </form>
         </div>
       </div>
+      {/* --------Color wise filter part--------- */}
+      <div className="filter-colors">
+        <h4>Colors</h4>
+        <div className="filter-color-style">
+          {colorsData.map((color ,index) => {
+            return (
+              <button type='button'
+                style={{
+                  backgroundColor:color
+                }}
+                className='btnStyle'
+                key={index}
+              >{color === color? "" : null}</button>
+            )
+          })}
+        </div>
+       </div>
     </div>
   );
 };
