@@ -5,8 +5,7 @@
    background-color: transparent;
    border: 1px solid rgb(226, 201, 201);
    outline: none;
-   border-radius: 5px;
-   
+   border-radius: 5px;  
 }
 .filter-category h4  ,.filter-company h4{
     text-align: start;
