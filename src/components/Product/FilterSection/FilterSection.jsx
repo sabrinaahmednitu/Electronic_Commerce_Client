@@ -16,11 +16,9 @@ const FilterSection = () => {
 
     //to concat unique colors
     if (property === 'colors') {
-      return (newValue=['All', ...new Set([].concat(...newValue))]);
-    } else {
+      newValue = newValue.flat();  // return (newValue=['All', ...new Set([].concat(...newValue))]);
+    }  
       return (newValue = ['all', ...new Set(newValue)]); //unique value asbe
-    }
-
     // console.log(newValue);
   };
 
