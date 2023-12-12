@@ -1,5 +1,6 @@
 import React from 'react';
 import { useFilterContext } from '../../../context/filterContext';
+import {FaCheck} from 'react-icons/fa'
 import './FilterSection.css';
 const FilterSection = () => {
   const {
@@ -87,20 +88,33 @@ const FilterSection = () => {
       <div className="filter-colors">
         <h4>Colors</h4>
         <div className="filter-color-style">
-          {colorsData.map((curColor ,index) => {
-            return (
-              <button
-                key={index}
-                type="button"
-                value={curColor}
-                name='color'  //ai nam r state er nam same howa lagbe exact
-                style={{ backgroundColor: curColor}}
-                onClick={updateFilterValue}
-                className="btnStyle"
-              >
-                {color === curColor ? '' : null}
-              </button>
-            );
+          {colorsData.map((curColor, index) => {
+            if(curColor==="all"){
+               return (
+                 <button
+                   key={index}
+                   type="button"
+                   value={curColor}
+                   name="color" //ai nam r state er nam same howa lagbe exact
+                   onClick={updateFilterValue}
+                 >
+                   All
+                 </button>
+               );
+            }
+             return (
+               <button
+                 key={index}
+                 type="button"
+                 value={curColor}
+                 name="color" //ai nam r state er nam same howa lagbe exact
+                 style={{ backgroundColor: curColor }}
+                 onClick={updateFilterValue}
+                 className={color === curColor ? "btnStyle active" : "btnStyle"}
+               >
+                 {color === curColor ? <FaCheck className="checkStyle"></FaCheck> : null}
+               </button>
+             );
           })}
         </div>
        </div>
