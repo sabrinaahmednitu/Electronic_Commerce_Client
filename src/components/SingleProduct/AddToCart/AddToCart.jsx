@@ -3,10 +3,14 @@ import './AddToCart.css';
 import { FaCheck } from "react-icons/fa";
 import CartAmountToggle from '../CartAmountToggle/CartAmountToggle';
 import { NavLink } from 'react-router-dom';
+import { useCartContext } from '../../../context/cartContext';
 
 const AddToCart = ({ singleProduct }) => {
 
-    const { id, colors, stock } = singleProduct;
+  const { addToCart } = useCartContext();
+
+  const { id, colors, stock } = singleProduct;
+  
     const [currentColor, setCurrentColor] = useState(colors[0]);
     const[amount,setAmount]=useState(1)
   
@@ -29,15 +33,17 @@ const AddToCart = ({ singleProduct }) => {
                 className={
                   currentColor === color ? 'btnStyle active' : 'btnStyle'
                 }
-                onClick={()=>setCurrentColor(color)}
+                onClick={() => setCurrentColor(color)}
               >
-                {currentColor===color?<FaCheck className='checkStyle'></FaCheck>:null}
+                {currentColor === color ? (
+                  <FaCheck className="checkStyle"></FaCheck>
+                ) : null}
               </button>
             ))}
           </p>
         </div>
 
-        <hr  />
+        <hr />
         {/* add to cart */}
         <CartAmountToggle
           amount={amount}
@@ -45,9 +51,13 @@ const AddToCart = ({ singleProduct }) => {
           setIncrease={setIncrease}
         ></CartAmountToggle>
 
-
-        <NavLink to="/cart">
-          <button className='addButton' >Add To Cart</button>
+        <NavLink
+          to="/cart"
+          onClick={() => addToCart(id, currentColor, amount, singleProduct)}
+        >
+          <button className="addButton">
+            Add To Cart;
+          </button>
         </NavLink>
       </div>
     );
