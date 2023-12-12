@@ -3,8 +3,12 @@ import './CartItem.css';
 import FormatPrice from '../../Helpers/FormatPrice';
 import CartAmountToggle from '../SingleProduct/CartAmountToggle/CartAmountToggle';
 import { FaTrash } from 'react-icons/fa';
+import { useCartContext } from '../../context/cartContext';
 
 const CartItem = ({ id, name, image, color, price, amount }) => {
+
+    const { removeItem } = useCartContext();
+
   const setIncrease = () => {
     amount < stock ? setAmount(amount + 1) : setAmount(stock);
   };
@@ -56,8 +60,8 @@ const CartItem = ({ id, name, image, color, price, amount }) => {
           </p>
         </div>
         {/* ---------cart-remove---------- */}
-        <div className="cart-remove">
-          <FaTrash className="remove-icon"></FaTrash>
+        <div>
+          <FaTrash className="remove-icon" onClick={()=>removeItem(id)}></FaTrash>
         </div>
       </div>
     </div>
