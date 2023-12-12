@@ -1,0 +1,59 @@
+.car-heading {
+  text-align: center;
+}
+.grid-five-column {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 0.3fr;
+  align-items: center;
+  text-align: left;
+}
+hr {
+  margin: 1rem 0rem;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0px;
+  gap: 16px;
+}
+
+/*--------- item -------- */
+.cart-item-content {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  align-items: center;
+  gap: 16px;
+  text-transform: capitalize;
+  text-align: left;
+}
+
+.cart-item-content img {
+  width: 80px;
+  height: 80px;
+}
+
+.color-style {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.color-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/*--------- remove part-------- */
+.remove-icon {
+  font-size: 20px;
+  color: #f34242;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .cart-hide {
+    display: none;
+  }
+}

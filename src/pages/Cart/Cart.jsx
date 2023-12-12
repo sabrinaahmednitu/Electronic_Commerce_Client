@@ -1,13 +1,14 @@
 import React from 'react';
 import CartItem from '../../components/Cart/CartItem';
 import { useCartContext } from '../../context/cartContext';
+import './Cart.css';
 
 const Cart = () => {
   const { cart } = useCartContext();
   console.log(cart);
   return (
     <div className="container mx-auto">
-      <div className="car-heading grid lg:grid-cols-5 text-center">
+      <div className="car-heading grid-five-column">
         <p>Item</p>
         <p className="cart-hide">Price</p>
         <p>Quantity</p>

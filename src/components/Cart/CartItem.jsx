@@ -13,9 +13,9 @@ const CartItem = ({ id, name, image, color, price, amount }) => {
   };
   return (
     <div>
-      <div className="grid lg:grid-cols-5">
+      <div className="grid-five-column">
         {/* ---------cart-item---------- */}
-        <div className="cart-item">
+        <div className="cart-item-content">
           <div>
             <figure>
               <img src={image} alt="" />
@@ -36,7 +36,7 @@ const CartItem = ({ id, name, image, color, price, amount }) => {
           </div>
         </div>
         {/* ---------Price---------- */}
-        <div className="cart-price cart-hide">
+        <div className="cart-hide">
           <p>
             <FormatPrice price={price}></FormatPrice>
           </p>
@@ -50,7 +50,7 @@ const CartItem = ({ id, name, image, color, price, amount }) => {
           ></CartAmountToggle>
         </div>
         {/* ---------Subtotal---------- */}
-        <div className="cart-subtotal cart-hide">
+        <div className="cart-hide">
           <p>
             <FormatPrice price={price * amount}></FormatPrice>
           </p>
