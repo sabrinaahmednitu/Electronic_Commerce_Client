@@ -124,7 +124,7 @@ const FilterSection = () => {
       {/* --------Price (bar) wise filter part--------- */}
       <div className="filter-price">
         <h4>Price</h4>
-        <p><FormatPrice value={price}></FormatPrice></p>
+        <p><FormatPrice price={price}></FormatPrice></p>
         <input
           type="range"
           name="price"
