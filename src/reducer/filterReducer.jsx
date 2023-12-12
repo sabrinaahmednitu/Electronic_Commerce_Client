@@ -1,10 +1,19 @@
 const filterReducer = (state, action) => {
   switch (action.type) {
     case 'LOAD_FILTER_PRODUCTS':
+      let priceArray = action.payload.map((curElem) => curElem.price);
+      let maxPrice = Math.max(...priceArray); // es6 er update ... use korle ta argument hisabe nay
+
+      //using reduce method
+      // let maxPrice = priceArray.reduce(
+      //   (initialVal, curVal) => Math.max(initialVal, curVal),
+      //   0
+      // );
       return {
         ...state,
         filter_products: [...action.payload],
         all_products: [...action.payload],
+        filters: { ...state.filters, maxPrice: maxPrice, price: maxPrice },
       };
 
     case 'SET_GRID_VIEW':
