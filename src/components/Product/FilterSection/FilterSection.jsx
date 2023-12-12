@@ -8,6 +8,7 @@ const FilterSection = () => {
     filters: { text, category ,color,price,maxPrice,minPrice },
     updateFilterValue,
     all_products,
+    clearFilters,
   } = useFilterContext();
 
   //to get the unique product (category ,company)
@@ -142,7 +143,7 @@ const FilterSection = () => {
 
       {/* --------clear all filter button --------- */}
       <div className="filter-clear">
-        <button > Clear Filters</button>
+        <button onClick={clearFilters}> Clear Filters</button>
       </div>
     </div>
   );

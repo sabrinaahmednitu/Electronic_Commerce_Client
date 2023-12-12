@@ -141,9 +141,9 @@ const filterReducer = (state, action) => {
           curElem.colors.includes(color)
         );
       }
-      if (price ===0) {
-        tempFilterProduct = tempFilterProduct.filter((curElem) =>
-          curElem.price = price
+      if (price === 0) {
+        tempFilterProduct = tempFilterProduct.filter(
+          (curElem) => (curElem.price = price)
         );
       } else {
         {
@@ -158,6 +158,22 @@ const filterReducer = (state, action) => {
         filter_products: tempFilterProduct,
       };
     //--------------search part end--------------
+
+    //to clear filters
+    case 'CLEAR_FILTERS':
+      return {
+        ...state,
+        filters: {
+          ...state.filters,
+          text: '',
+          category: 'all',
+          company: 'all',
+          color: 'all',
+          maxPrice: 0,
+          minPrice: state.filters.maxPrice,
+          price: state.filters.maxPrice,
+        },
+      };
 
     default:
       return state;
