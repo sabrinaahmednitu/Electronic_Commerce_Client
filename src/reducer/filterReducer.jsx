@@ -105,29 +105,37 @@ const filterReducer = (state, action) => {
         },
       };
 
+    //--------------company,category,price wise search part--------------
     case 'FILTER_PRODUCTS':
       let { all_products } = state;
       let tempFilterProduct = [...all_products];
 
-      const { text, category, company } = state.filters;
-      
+      const { text, category, company, color } = state.filters;
+
       if (text) {
         tempFilterProduct = tempFilterProduct.filter((curElem) => {
           return curElem.name.toLowerCase().includes(text);
-        })
+        });
       }
-      if (category !== "all") {
-        tempFilterProduct = tempFilterProduct.filter((curElem) => curElem.category === category);
-      }
-      if (company !== "all") {
-        tempFilterProduct = tempFilterProduct.filter((curElem) => curElem.company.toLowerCase() === company.toLowerCase()
+      if (category !== 'all') {
+        tempFilterProduct = tempFilterProduct.filter(
+          (curElem) => curElem.category === category
         );
       }
+      if (company !== 'all') {
+        tempFilterProduct = tempFilterProduct.filter(
+          (curElem) => curElem.company.toLowerCase() === company.toLowerCase()
+        );
+      }
+      if (color) {
+        tempFilterProduct = tempFilterProduct.filter((curElem) =>curElem.colors.includes(color)
+        )
+      }
 
-       return {
-         ...state,
-         filter_products: tempFilterProduct,
-       };
+      return {
+        ...state,
+        filter_products: tempFilterProduct,
+      };
     //--------------search part end--------------
 
     default:

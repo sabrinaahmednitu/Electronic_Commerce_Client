@@ -3,7 +3,7 @@ import { useFilterContext } from '../../../context/filterContext';
 import './FilterSection.css';
 const FilterSection = () => {
   const {
-    filters: { text, category ,colors },
+    filters: { text, category ,color },
     updateFilterValue,
     all_products,
   } = useFilterContext();
@@ -87,16 +87,20 @@ const FilterSection = () => {
       <div className="filter-colors">
         <h4>Colors</h4>
         <div className="filter-color-style">
-          {colorsData.map((color ,index) => {
+          {colorsData.map((curColor ,index) => {
             return (
-              <button type='button'
-                style={{
-                  backgroundColor:color
-                }}
-                className='btnStyle'
+              <button
                 key={index}
-              >{color === color? "" : null}</button>
-            )
+                type="button"
+                value={curColor}
+                name='color'  //ai nam r state er nam same howa lagbe exact
+                style={{ backgroundColor: curColor}}
+                onClick={updateFilterValue}
+                className="btnStyle"
+              >
+                {color === curColor ? '' : null}
+              </button>
+            );
           })}
         </div>
        </div>
