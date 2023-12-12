@@ -63,6 +63,7 @@ const FilterSection = () => {
           })}
         </div>
       </div>
+
       {/* --------Company wise filter part--------- */}
       <div className="filter-company">
         <h4>Company</h4>
@@ -85,6 +86,7 @@ const FilterSection = () => {
           </form>
         </div>
       </div>
+
       {/* --------Color wise filter part--------- */}
       <div className="filter-colors">
         <h4>Colors</h4>
@@ -121,17 +123,26 @@ const FilterSection = () => {
           })}
         </div>
       </div>
+
       {/* --------Price (bar) wise filter part--------- */}
       <div className="filter-price">
         <h4>Price</h4>
-        <p><FormatPrice price={price}></FormatPrice></p>
+        <p>
+          <FormatPrice price={price}></FormatPrice>
+        </p>
         <input
           type="range"
           name="price"
           min={minPrice}
           max={maxPrice}
           value={price}
-          onChange={updateFilterValue} />
+          onChange={updateFilterValue}
+        />
+      </div>
+
+      {/* --------clear all filter button --------- */}
+      <div className="filter-clear">
+        <button > Clear Filters</button>
       </div>
     </div>
   );
