@@ -30,10 +30,8 @@ const cartReducer = (state, action) => {
       ...state,
       cart: updatedCart,
     };
-    }
-    
+  }
 
-    
   return state;
 };
 

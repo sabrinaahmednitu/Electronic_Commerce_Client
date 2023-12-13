@@ -16,12 +16,10 @@ const Cart = () => {
         <p>Remove</p>
       </div>
       <hr />
-          <div className="cart-item">
-              {
-                  cart.map((curElem) => {
-                      return <CartItem key={curElem.id} {...curElem} ></CartItem>;
-                  })
-              }
+      <div className="cart-item">
+        {cart.map((curElem) => {
+          return <CartItem key={curElem.id} {...curElem}></CartItem>;
+        })}
       </div>
     </div>
   );
