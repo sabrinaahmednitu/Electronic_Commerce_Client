@@ -1,11 +1,20 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import CartItem from '../../components/Cart/CartItem';
 import { useCartContext } from '../../context/cartContext';
 import './Cart.css';
 
 const Cart = () => {
-  const { cart } = useCartContext();
+  const { cart, clearCart } = useCartContext();
   console.log(cart);
+
+
+  if (cart.length === 0) {
+    return <div>
+      <h3 className='empty-cart'>No Item In The Cart</h3>
+    </div>
+  }
+
   return (
     <div className="container mx-auto">
       <div className="car-heading grid-five-column">
@@ -16,10 +25,20 @@ const Cart = () => {
         <p>Remove</p>
       </div>
       <hr />
+
+
       <div className="cart-item">
         {cart.map((curElem) => {
           return <CartItem key={curElem.id} {...curElem}></CartItem>;
         })}
+      </div>
+
+      <hr />
+      <div className="cart-two-button">
+        <NavLink to="/products" className="left-btn">
+          Continue Shopping
+        </NavLink>
+        <button className='right-btn' onClick={clearCart}>Clear Cart</button>
       </div>
     </div>
   );

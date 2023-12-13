@@ -32,6 +32,15 @@ const cartReducer = (state, action) => {
     };
   }
 
+  //remove all cart 
+  if (action.type === 'CLEAR_CART') {
+    return {
+      ...state,
+      cart:[],
+    }
+  }
+  
+  
   return state;
 };
 
