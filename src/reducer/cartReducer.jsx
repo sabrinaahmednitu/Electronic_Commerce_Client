@@ -5,25 +5,26 @@ const cartReducer = (state, action) => {
     // console.log('add to cart', singleProduct);
   
     //tackel existing product
-    let existingProduct = state.cart.find((curItem) => curItem.id = id + currentColor);
+    let existingProduct = state.cart.find((curItem) => curItem.id == id + currentColor);
     
     if (existingProduct) {
       let updatedProduct = state.cart.map((curElem) => {
-        if (curElem.id = id + currentColor) {
+        if (curElem.id == id + currentColor) {
           let newAmount = curElem.amount + amount;
-          // if (newAmount >= curElem.max) { //max=stock
-          //   newAmount=curElem.max
-          // }
-           return {
-             ...curElem,
-             amount: newAmount,
-           };
+
+          if (newAmount >= curElem.max) { //max=stock
+            newAmount = curElem.max
+          }
+          return {
+            ...curElem,
+            amount: newAmount,
+          };
         }
         else {
-            return curElem
+          return curElem
         }
        
-      })
+      });
        return {
          ...state,
          cart: updatedProduct
