@@ -7,14 +7,14 @@ import { useCartContext } from '../../context/cartContext';
 
 const CartItem = ({ id, name, image, color, price, amount }) => {
 
-    const { removeItem } = useCartContext();
+    const { removeItem, setIncrease, setDecrease } = useCartContext();
 
-  const setIncrease = () => {
-    amount < stock ? setAmount(amount + 1) : setAmount(stock);
-  };
-  const setDecrease = () => {
-    amount > 1 ? setAmount(amount - 1) : setAmount(1);
-  };
+  // const setIncrease = () => {
+  //   amount < stock ? setAmount(amount + 1) : setAmount(stock);
+  // };
+  // const setDecrease = () => {
+  //   amount > 1 ? setAmount(amount - 1) : setAmount(1);
+  // };
   return (
     <div>
       <div className="grid-five-column">
@@ -49,8 +49,8 @@ const CartItem = ({ id, name, image, color, price, amount }) => {
         <div className="cart-quantity">
           <CartAmountToggle
             amount={amount}
-            setDecrease={setDecrease}
-            setIncrease={setIncrease}
+            setDecrease={()=>setDecrease(id)}
+            setIncrease={()=>setIncrease(id)}
           ></CartAmountToggle>
         </div>
         {/* ---------Subtotal---------- */}
