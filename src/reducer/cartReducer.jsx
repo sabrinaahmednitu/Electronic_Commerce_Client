@@ -77,11 +77,13 @@ const cartReducer = (state, action) => {
         if (decAmount <= 1) {
           decAmount = 1;
         }
+        //jader id match hoiche tader amount chage korchi
         return {
           ...curElem,
           amount: decAmount,
         };
       } else {
+        //r jader hoyni as it is pass kore dechi
         return curElem;
       }
     });
@@ -109,11 +111,23 @@ const cartReducer = (state, action) => {
   }
 
 
+  if (action.type==='TOTAL_CART_ITEM') {
+    let updatedItemValue = state.cart.reduce((inititalVAl,curElem) => {
+      let { amount } = curElem;
+      inititalVAl = inititalVAl + amount;
+      return inititalVAl;
+    }, 0); //total-cart-item=0
 
-
-
-
-
+    return {
+      ...state,
+      total_cart_item:updatedItemValue
+    }
+  }
+  
+  
+  
+  
+  
   return state;
 };
 

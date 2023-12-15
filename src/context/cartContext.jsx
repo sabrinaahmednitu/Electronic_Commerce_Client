@@ -15,8 +15,8 @@ const getLocalCartData = () => {
 const initialState = {
   // cart: [],
   cart: getLocalCartData(),
-  total_item: '',
-  total_amount: '',
+  total_cart_item: '',
+  total_price: '',
   shipping_fee: 5000,
 };
 
@@ -48,8 +48,11 @@ const CartProvider = ({ children }) => {
     dispatch({type:"CLEAR_CART"})
   }
 
+
+
   //to add the data in localStorage
   useEffect(() => {
+    dispatch({ type: 'TOTAL_CART_ITEM' });
     localStorage.setItem("nituCart",JSON.stringify(state.cart))
   },[state.cart])
 
