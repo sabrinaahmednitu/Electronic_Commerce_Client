@@ -110,7 +110,7 @@ const cartReducer = (state, action) => {
     return { ...state, cart: updatedProduct };
   }
 
-
+//cart item update at navbar corner
   if (action.type==='TOTAL_CART_ITEM') {
     let updatedItemValue = state.cart.reduce((inititalVAl,curElem) => {
       let { amount } = curElem;

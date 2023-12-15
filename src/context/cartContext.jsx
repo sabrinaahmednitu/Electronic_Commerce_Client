@@ -52,7 +52,8 @@ const CartProvider = ({ children }) => {
 
   //to add the data in localStorage
   useEffect(() => {
-    dispatch({ type: 'TOTAL_CART_ITEM' });
+    dispatch({ type: 'TOTAL_CART_ITEM' }); //update cart icon item number
+    dispatch({type:"TOTAL_PRICE"})
     localStorage.setItem("nituCart",JSON.stringify(state.cart))
   },[state.cart])
 
