@@ -60,9 +60,9 @@ const Footer = () => {
                 <input
                   type="text"
                   placeholder="...@gmail.com"
-                  className="input input-bordered w-full pr-16"
+                  className="input input-bordered w-full pr-16 bg-white"
                 />
-                <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">
+                <button className="btn absolute top-0 right-0 rounded-l-none">
                   Subscribe
                 </button>
               </div>
@@ -79,8 +79,8 @@ const Footer = () => {
           </form>
         </footer>
 
-        <footer className="bg-[#e6e7eb] text-black  text-center pt-3 pb-5">
-          <hr class="h-px my-8 bg-base-100 border-0 w-[85%] mx-auto"></hr>
+        {/* <footer className="bg-[#e6e7eb] text-black  text-center pt-3 pb-5"> */}
+        <footer className="text-center pt-3 pb-5">
           <h1>
             {' '}
             @ {new Date().getFullYear()} All Right Reserved by Sabrina Ahmed
