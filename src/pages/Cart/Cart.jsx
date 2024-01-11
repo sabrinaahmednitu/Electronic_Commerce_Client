@@ -18,7 +18,7 @@ const Cart = () => {
 
   return (
     <div className="container mx-auto">
-      <div className="car-heading grid-five-column">
+      <div className="cart-heading grid-five-column">
         <p>Item</p>
         <p className="cart-hide">Price</p>
         <p>Quantity</p>

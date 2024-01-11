@@ -17,7 +17,7 @@ const CartItem = ({ id, name, image, color, price, amount }) => {
   // };
   return (
     <div>
-      <div className="grid-five-column">
+      <div className="grid-five-column ">
         {/* ---------cart-item---------- */}
         <div className="cart-item-content">
           <div>

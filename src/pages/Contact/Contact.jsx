@@ -20,7 +20,7 @@ const Contact = () => {
             <input type="text" placeholder="username" name="username" />
             <input type="text" placeholder="Email" name="Email" />
             <textarea
-              name=""
+              name="message"
               id=""
               cols="20"
               rows="7"

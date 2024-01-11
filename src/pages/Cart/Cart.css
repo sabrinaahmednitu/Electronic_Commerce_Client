@@ -1,5 +1,6 @@
-.car-heading {
+.cart-heading {
   text-align: center;
+  margin-top: 20px;
 }
 .grid-five-column {
   display: grid;
