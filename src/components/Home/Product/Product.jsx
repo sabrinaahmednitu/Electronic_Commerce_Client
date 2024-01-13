@@ -15,9 +15,7 @@ const Product = ({ featureProduct }) => {
           </figure>
           <div className="card-data card-data-flex">
             <h1>{name}</h1>
-            <p >
-              {<FormatPrice price={price}></FormatPrice>}
-            </p>
+            <p>{<FormatPrice price={price}></FormatPrice>}</p>
           </div>
         </div>
       </Link>

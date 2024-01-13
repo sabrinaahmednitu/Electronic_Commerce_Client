@@ -11,10 +11,16 @@ import cs8 from '../../images/CustomerServiceimg/CS8.png'
 import cs9 from '../../images/CustomerServiceimg/CS9.png'
 import cs10 from '../../images/CustomerServiceimg/CS10.png'
 import cs11 from '../../images/CustomerServiceimg/CS11.png'
+import Helmet from 'react-helmet';
 
 const CustomerService = () => {
     return (
       <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Customer service | Electronic web</title>
+          <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
         <section className="customerService-main">
           <div className=" max-w-[1280px] mx-auto pt-20 pb-20">
             <h1 className="text-3xl text-white font-bold">
@@ -108,7 +114,7 @@ const CustomerService = () => {
             />
           </div>
           <section className="container mx-auto text-black">
-            <h2 className="text-3xl mt-4" >All help topics</h2>
+            <h2 className="text-3xl mt-4">All help topics</h2>
           </section>
         </section>
       </div>

@@ -1,3 +1,4 @@
+import Helmet from 'react-helmet';
 import FilterSection from '../../components/Product/FilterSection/FilterSection';
 import ProductList from '../../components/Product/ProductList/ProductList';
 import Sort from '../../components/Product/Sort/Sort';
@@ -8,13 +9,17 @@ const Products = () => {
   const { filter_products } = useFilterContext();
   // console.log(filter_products);
   return (
-    <div className='container mx-auto'>
+    <div className="container mx-auto">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Products for sale ! | Electronic web</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className=" grid-filter-column">
         {/*-------- section 1 --------*/}
         <section>
           <FilterSection></FilterSection>
         </section>
-     
 
         {/*-------- section 2 --------*/}
         <section className="product-view-sort">
@@ -27,7 +32,6 @@ const Products = () => {
             <ProductList></ProductList>
           </div>
         </section>
-     
       </div>
     </div>
   );

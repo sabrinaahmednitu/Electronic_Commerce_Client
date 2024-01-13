@@ -8,6 +8,7 @@ import { TbTruckDelivery, TbReplace} from 'react-icons/tb';
 import Stars from '../../components/SingleProduct/star/Stars';
 import './SingleProduct.css';
 import AddToCart from '../../components/SingleProduct/AddToCart/AddToCart';
+import Helmet from 'react-helmet';
 
 
 const SingleProduct = () => {
@@ -24,6 +25,11 @@ const {name,image,company,price,description,category,stock,stars,reviews}=single
 
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Product Details | Electronic web</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <PageNavigation title={name}></PageNavigation>
 
       <section className="container mx-auto max-w-5xl">

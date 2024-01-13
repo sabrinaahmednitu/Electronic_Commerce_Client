@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import { NavLink } from 'react-router-dom';
 import CartItem from '../../components/Cart/CartItem';
 import { useCartContext } from '../../context/cartContext';
@@ -18,6 +19,11 @@ const Cart = () => {
 
   return (
     <div className="container mx-auto">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Cart | Electronic web</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="cart-heading grid-five-column">
         <p>Item</p>
         <p className="cart-hide">Price</p>

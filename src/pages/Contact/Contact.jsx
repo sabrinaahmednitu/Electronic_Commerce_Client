@@ -1,9 +1,15 @@
 import React from 'react';
 import './Contact.css';
 import contact from '../../images/CustomerServiceimg/contact-img.png'
+import Helmet from 'react-helmet';
 const Contact = () => {
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Contact Us | Electronic web</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="container mx-auto mt-12 mb-12">
         <h2 className="text-2xl text-black text-center mb-5">
           Feel Free To Contact
