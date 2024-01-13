@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import PageNavigation from '../../components/SingleProduct/PageNavigation';
-import SingleImage from '../../components/SingleProduct/SingleImage';
-import { useProductContext } from '../../context/productContext';
-import FormatPrice from '../../Helpers/FormatPrice';
+import PageNavigation from '../PageNavigation';
+import SingleImage from '../SingleImage';
+import { useProductContext } from '../../../context/productContext';
+import FormatPrice from '../../../Helpers/FormatPrice';
 import { TbTruckDelivery, TbReplace} from 'react-icons/tb';
-import Stars from '../../components/SingleProduct/star/Stars';
+import Stars from '../star/Stars';
 import './SingleProduct.css';
-import AddToCart from '../../components/SingleProduct/AddToCart/AddToCart';
-import Helmet from 'react-helmet';
+import AddToCart from '../AddToCart/AddToCart';
+
 
 
 const SingleProduct = () => {
@@ -25,11 +25,6 @@ const {name,image,company,price,description,category,stock,stars,reviews}=single
 
   return (
     <div>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Product Details | Electronic web</title>
-        <link rel="canonical" href="http://mysite.com/example" />
-      </Helmet>
       <PageNavigation title={name}></PageNavigation>
 
       <section className="container mx-auto max-w-5xl">

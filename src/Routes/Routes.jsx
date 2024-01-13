@@ -6,7 +6,8 @@ import CustomerService from "../pages/CustomerService/CustomerService";
 import Error from "../pages/Error/Error";
 import Home from "../pages/Home/Home";
 import Products from "../pages/Products/Products";
-import SingleProduct from "../pages/SingleProduct/SingleProduct";
+import SingleProduct from '../pages/SignleProduct/SignleProduct';
+
 
 export const router = createBrowserRouter([
   {
