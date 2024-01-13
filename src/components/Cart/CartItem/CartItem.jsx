@@ -1,9 +1,9 @@
 import React from 'react';
 import './CartItem.css';
-import FormatPrice from '../../Helpers/FormatPrice';
-import CartAmountToggle from '../SingleProduct/CartAmountToggle/CartAmountToggle';
+import FormatPrice from '../../../Helpers/FormatPrice';
+import CartAmountToggle from '../../SingleProduct/CartAmountToggle/CartAmountToggle';
 import { FaTrash } from 'react-icons/fa';
-import { useCartContext } from '../../context/cartContext';
+import { useCartContext } from '../../../context/cartContext';
 
 const CartItem = ({ id, name, image, color, price, amount }) => {
 
