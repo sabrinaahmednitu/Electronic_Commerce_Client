@@ -1,6 +1,6 @@
 [
   {
-    "id": "thapaserialnol",
+    "id": "nituserialno1",
     "name": "Montblance",
     "price": 311999,
     "company": "montblance",
@@ -10,7 +10,7 @@
     "category": "watch"
   },
   {
-    "id": "thapaserialnom",
+    "id": "nituserialno2",
     "name": "iphone 15",
     "company": "apple",
     "price": 119999,
@@ -20,7 +20,7 @@
     "category": "mobile"
   },
   {
-    "id": "thapaserialnon",
+    "id": "nituserialno3",
     "name": "Cartier",
     "company": "Swiss",
     "price": 119999,
@@ -30,7 +30,7 @@
     "category": "watch"
   },
   {
-    "id": "thapaserialnoo",
+    "id": "nituserialno4",
     "name": "Montblance",
     "company": "Swiss",
     "price": 119999,
@@ -41,7 +41,7 @@
     "featured": true
   },
   {
-    "id": "thapaserialnoo",
+    "id": "nituserialno5",
     "name": "Cartier",
     "company": "Swiss",
     "price": 119999,
@@ -51,7 +51,7 @@
     "category": "watch"
   },
   {
-    "id": "thapaserialnoo",
+    "id": "nituserialno6",
     "name": "Mavic 3",
     "company": "Mavik",
     "price": 119999,
@@ -61,7 +61,7 @@
     "category": "drone"
   },
   {
-    "id": "thapaserialnoo",
+    "id": "nituserialno7",
     "name": "Sony",
     "company": "sony",
     "price": 119999,
@@ -71,7 +71,7 @@
     "category": "camera"
   },
   {
-    "id": "thapaserialnoa",
+    "id": "nituserialno8",
     "name": "iPhone 15 Pro Max",
     "company": "apple",
     "price": 219999,
@@ -82,7 +82,7 @@
     "featured": true
   },
   {
-    "id": "thapaserialnob",
+    "id": "nituserialno9",
     "name": "samsung s20",
     "company": "samsung",
     "price": 5000000,
@@ -93,7 +93,7 @@
     "shipping": true
   },
   {
-    "id": "thapaserialnoc",
+    "id": "nituserialno10",
     "name": "Dell Series",
     "company": "dell",
     "price": 600000,
@@ -103,7 +103,7 @@
     "category": "laptop"
   },
   {
-    "id": "thapaserialnod",
+    "id": "nituserialno11",
     "name": "Drone 315",
     "company": "Mavic",
     "price": 12599,
@@ -114,7 +114,7 @@
     "shipping": true
   },
   {
-    "id": "thapaserialnoe",
+    "id": "nituserialno12",
     "name": "Mac Pc",
     "company": "apple",
     "price": 4000099,
@@ -125,7 +125,7 @@
     "shipping": true
   },
   {
-    "id": "thapaserialnof",
+    "id": "nituserialno13",
     "name": "Macbook Pro",
     "company": "apple",
     "price": 42999,
@@ -136,7 +136,7 @@
     "shipping": true
   },
   {
-    "id": "thapaserialnog",
+    "id": "nituserialno14",
     "name": "Asus Tuf Gaming",
     "company": "asus",
     "price": 23999,
@@ -146,7 +146,7 @@
     "shipping": true
   },
   {
-    "id": "thapaserialnoh",
+    "id": "nituserialno15",
     "name": "Mavic 2",
     "price": 1099999,
     "company": "Mavic",
@@ -157,7 +157,7 @@
     "shipping": true
   },
   {
-    "id": "thapaserialnoi",
+    "id": "nituserialno16",
     "name": "iwatch",
     "price": 39999,
     "company": "apple",
@@ -168,7 +168,7 @@
     "shipping": true
   },
   {
-    "id": "thapaserialnoj",
+    "id": "nituserialno17",
     "name": "Cannon 5D",
     "company": "cannon",
     "price": 300099,
@@ -179,7 +179,7 @@
     "featured": true
   },
   {
-    "id": "thapaserialnok",
+    "id": "nituserialno18",
     "name": "Rolex premium",
     "company": "rolex",
     "price": 999999,

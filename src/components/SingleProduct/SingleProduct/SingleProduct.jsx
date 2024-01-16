@@ -16,6 +16,7 @@ const { id } = useParams();
 const { getSingleProduct, isLoading, singleProduct } = useProductContext();
 const {name,image,company,price,description,category,stock,stars,reviews}=singleProduct;
   useEffect(() => {
+    // getSingleProduct(`http://localhost:5000/electronicProduct?id=${id}`);
     getSingleProduct(`https://api.pujakaitem.com/api/products?id=${id}`);
   }, []);
 

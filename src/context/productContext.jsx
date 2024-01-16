@@ -4,7 +4,7 @@ import reducer from '../reducer/productReducer';
 
 const AppContext = createContext();
 
-const API = '../../public/product.json';
+const API = 'http://localhost:5000/electronicProduct';
 
 const initialState = {
   isLoading: false,
