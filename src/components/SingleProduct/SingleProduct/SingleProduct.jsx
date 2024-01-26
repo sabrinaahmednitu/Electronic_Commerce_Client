@@ -9,15 +9,14 @@ import Stars from '../star/Stars';
 import './SingleProduct.css';
 import AddToCart from '../AddToCart/AddToCart';
 
-
+const API = `http://localhost:5000/electronicProduct`;
 
 const SingleProduct = () => {
-const { id } = useParams();
+  const { id } = useParams();
 const { getSingleProduct, isLoading, singleProduct } = useProductContext();
 const {name,image,company,price,description,category,stock,stars,reviews}=singleProduct;
   useEffect(() => {
-    // getSingleProduct(`http://localhost:5000/electronicProduct?id=${id}`);
-    getSingleProduct(`https://api.pujakaitem.com/api/products?id=${id}`);
+      getSingleProduct(`http://localhost:5000/electronicProduct/${id}`);
   }, []);
 
   if (isLoading) {
@@ -34,7 +33,7 @@ const {name,image,company,price,description,category,stock,stars,reviews}=single
             <SingleImage imgs={image}></SingleImage>
           </div>
           <div className="product_data text-black p-5">
-            <h1 className="text-4xl mb-3">{name} </h1>
+            <h1 className="text-4xl mb-3">{name}{ id} </h1>
             <Stars stars={stars} reviews={reviews}></Stars>
             <p className="product-price mt-3 mb-3">
               BDT :{' '}

@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import FormatPrice from '../../../Helpers/FormatPrice';
 
 const Product = ({ featureProduct }) => {
-  const { id, name, image, price, category } = featureProduct;
+  const { _id, name, image, price, category } = featureProduct;
   return (
     <div>
-      <Link to={`/singleProduct/${id}`}>
+      <Link to={`/singleProduct/${_id}`}>
         <div className="card">
           <figure className="product-figure">
             <img src={image} alt={name} />

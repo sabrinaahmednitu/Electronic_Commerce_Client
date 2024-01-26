@@ -12,7 +12,7 @@ const GridView = ({ products }) => {
                     products.map((product)=> {
                      return (
                        <div>
-                         <Link to={`/singleProduct/${product.id}`}>
+                         <Link to={`/singleProduct/${product._id}`}>
                            <div className="card">
                              <figure className="product-figure">
                                <img src={product.image} alt={product.name} />

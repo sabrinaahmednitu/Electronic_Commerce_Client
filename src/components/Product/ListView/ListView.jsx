@@ -9,7 +9,7 @@ const ListView = ({ products }) => {
       <div className="container">
         <div className="list-container">
           {products.map((product) => {
-            const { id, name, price, description, image } = product;
+            const { _id, name, price, description, image } = product;
             return (
               <div className="listview-card">
                 {/* column-1 */}
@@ -24,7 +24,7 @@ const ListView = ({ products }) => {
                     <FormatPrice price={price}></FormatPrice>
                   </p>
                   <h5>{description.slice(0, 99)}...</h5>
-                  <NavLink to={`/singleproduct/${id}`}>
+                  <NavLink to={`/singleproduct/${_id}`}>
                     <button className="list-btn">Read More</button>
                   </NavLink>
                 </div>
