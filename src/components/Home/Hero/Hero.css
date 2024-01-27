@@ -1,10 +1,10 @@
- /* figure {
+ figure {
     position: relative;
   }
 .hero-left{
   position: relative;
-} */
-/* .hero-left h3::after{
+} 
+ .hero-left h3::after{
      content: " ";
       width: 60%;
       height: 80%;
@@ -13,4 +13,11 @@
       left: 50%;
       top: -5rem;
       z-index: -1;
-} */
+}
+/* Add this to your Hero.css file */
+.hero-img {
+  position: relative;
+  background-color: rgb(80, 162, 255);
+  padding-top: 10px;
+  padding-left: 10px;
+}
