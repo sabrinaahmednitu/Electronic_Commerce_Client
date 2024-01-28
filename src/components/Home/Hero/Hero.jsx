@@ -21,13 +21,14 @@ const Hero = () => {
               Shop Now
             </button>
           </div>
-    
-            <div className="hero-img">
+
+          <div className="hero-img">
+            <div className="hero-image-div">
               <figure>
-                <img src={HeroImg} alt="" className='img-style' />
+                <img src={HeroImg} alt="" className="img-style" />
               </figure>
             </div>
-         
+          </div>
         </div>
       </div>
     );

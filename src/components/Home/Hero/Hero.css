@@ -1,29 +1,30 @@
- figure {
-    position: relative;
-  }
-.hero-left{
+figure {
   position: relative;
-} 
- .hero-left h3::after{
-     content: " ";
-      width: 60%;
-      height: 80%;
-      background-color: rgba(109, 88, 245, 0.4);
-      position: absolute;
-      left: 50%;
-      top: -5rem;
-      z-index: -1;
+}
+.hero-left {
+  position: relative;
+}
+.hero-left h3::after {
+  content: ' ';
+  width: 60%;
+  height: 80%;
+  background-color: rgba(109, 88, 245, 0.4);
+  position: absolute;
+  left: 50%;
+  top: -5rem;
+  z-index: -1;
 }
 /* Add this to your Hero.css file */
 .hero-img {
   position: relative;
-  background-color: rgb(43, 226, 74);
-  padding-top: 30px;
-  padding-right: 40px;
 }
-.hero-img::after {
+.hero-image-div {
   position: absolute;
-  background-color: rgb(43, 226, 74);
-  padding-top: 30px;
+  background-color: rgb(228, 91, 132);
+  height: 50px;
+  width: 100px;
+  padding-top: 10px;
+  padding-bottom: 30px;
   padding-right: 40px;
+  
 }
