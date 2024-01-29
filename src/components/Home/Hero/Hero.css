@@ -17,14 +17,16 @@ figure {
 /* Add this to your Hero.css file */
 .hero-img {
   position: relative;
+  margin-right: 30px;
 }
 .hero-image-div {
   position: absolute;
   background-color: rgb(228, 91, 132);
-  height: 50px;
-  width: 100px;
-  padding-top: 10px;
-  padding-bottom: 30px;
-  padding-right: 40px;
+  height: 350px;
+  width: 400px;
+ top: 10px;
+  bottom: 30px;
+  right: 40px;
+  margin-left: 30px;
   
 }
