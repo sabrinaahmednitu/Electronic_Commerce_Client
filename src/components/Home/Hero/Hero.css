@@ -1,4 +1,4 @@
-figure {
+/* figure {
   position: relative;
 }
 .hero-left {
@@ -13,20 +13,27 @@ figure {
   left: 50%;
   top: -5rem;
   z-index: -1;
-}
+} */
 /* Add this to your Hero.css file */
+figure {
+  position: relative;
+}
 .hero-img {
   position: relative;
-  margin-right: 30px;
 }
 .hero-image-div {
   position: absolute;
   background-color: rgb(210, 207, 252);
-  /* background-color: rgb(228, 91, 132); */
-  height: 260px;
-  width: 410px;
- top: 50px;
+  height: 270px;
+  width: 430px;
+  top: 50px;
   bottom: -30px;
   right: -40px;
   left: 30px;
+  
+}
+@media only screen and (max-width: 1200px) {
+  .hero-image-div {
+    display: none;
+  }
 }
