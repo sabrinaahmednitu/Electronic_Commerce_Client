@@ -23,11 +23,10 @@ const Hero = () => {
           </div>
 
           <div className="hero-img">
-            <div className="hero-image-div">
-              <figure>
-                <img src={HeroImg} alt="" className="img-style" />
-              </figure>
-            </div>
+            <div className="hero-image-div"></div>
+            <figure>
+              <img src={HeroImg} alt="" className="img-style" />
+            </figure>
           </div>
         </div>
       </div>

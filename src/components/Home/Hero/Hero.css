@@ -21,12 +21,12 @@ figure {
 }
 .hero-image-div {
   position: absolute;
-  background-color: rgb(228, 91, 132);
-  height: 350px;
-  width: 400px;
- top: 10px;
-  bottom: 30px;
-  right: 40px;
-  margin-left: 30px;
-  
+  background-color: rgb(210, 207, 252);
+  /* background-color: rgb(228, 91, 132); */
+  height: 260px;
+  width: 410px;
+ top: 50px;
+  bottom: -30px;
+  right: -40px;
+  left: 30px;
 }
