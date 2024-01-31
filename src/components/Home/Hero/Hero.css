@@ -1,19 +1,4 @@
-/* figure {
-  position: relative;
-}
-.hero-left {
-  position: relative;
-}
-.hero-left h3::after {
-  content: ' ';
-  width: 60%;
-  height: 80%;
-  background-color: rgba(109, 88, 245, 0.4);
-  position: absolute;
-  left: 50%;
-  top: -5rem;
-  z-index: -1;
-} */
+
 /* Add this to your Hero.css file */
 figure {
   position: relative;
