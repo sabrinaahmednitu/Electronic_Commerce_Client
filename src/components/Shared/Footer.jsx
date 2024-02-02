@@ -83,7 +83,7 @@ const Footer = () => {
         <footer className="footer-claim text-center">
           <h1 className="">
             {' '}
-            @ {new Date().getFullYear()} All Right Reserved by Sabrina Ahmed
+            @ {new Date().getFullYear()} All Right Reserved by Sabrina Momtaz
             Nitu
           </h1>
         </footer>
