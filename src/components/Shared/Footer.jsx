@@ -86,6 +86,11 @@ const Footer = () => {
             @ {new Date().getFullYear()} All Right Reserved by Sabrina Ahmed
             Nitu
           </h1>
+          <h1 className="">
+            {' '}
+            @ {new Date().getFullYear()} All Right Reserved by Sabrina Ahmed
+            Nitu
+          </h1>
         </footer>
       </section>
     </div>
