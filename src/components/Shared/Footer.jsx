@@ -72,10 +72,10 @@ const Footer = () => {
             <header className="footer-title">Let Us Help You</header>
             <a className="link link-hover">Your Account</a>
             <a className="link link-hover">Your Orders</a>
-            <a className="link link-hover">Shipping Rates & Policies</a>
+            {/* <a className="link link-hover">Shipping Rates & Policies</a>
             <a className="link link-hover">Returns & Replacements</a>
             <a className="link link-hover">Manage Your Content and Devices</a>
-            <a className="link link-hover">Help</a>
+            <a className="link link-hover">Help</a> */}
           </form>
         </footer>
 
