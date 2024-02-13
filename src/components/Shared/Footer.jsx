@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Footer.css'
+import './Footer.css';
+import paymenticon1 from '../../images/CustomerServiceimg/paymenticon1.webp'
 
 const Footer = () => {
   return (
@@ -77,22 +78,22 @@ const Footer = () => {
             <a className="link link-hover">Manage Your Content and Devices</a>
             <a className="link link-hover">Help</a>
             <a className="link link-hover">Manage Your Devices</a>
-      
           </form>
         </footer>
 
         {/* <footer className="bg-[#e6e7eb] text-black  text-center pt-3 pb-5"> */}
-        <footer className="footer-claim text-center">
-          <h1 className="">
-            {' '}
-            @ {new Date().getFullYear()} All Right Reserved by Sabrina Ahmed
-            Nitu
-          </h1>
-          <h1 className="">
-            {' '}
-            @ {new Date().getFullYear()} All Right Reserved by Sabrina Ahmed
-            Nitu
-          </h1>
+        <footer className="footer-claim text-center flex justify-center gap-11">
+          <div>
+            <h1 className="">
+              {' '}
+              @ {new Date().getFullYear()} All Right Reserved by Sabrina Ahmed
+              Nitu
+            </h1>
+          </div>
+          <div>
+            <p>We Accept -</p>
+            <img src={paymenticon1} alt="" />
+          </div>
         </footer>
       </section>
     </div>
