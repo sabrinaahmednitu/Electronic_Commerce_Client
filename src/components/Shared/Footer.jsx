@@ -52,6 +52,7 @@ const Footer = () => {
             <a className="link link-hover">Electronic Web Business Card</a>
             <a className="link link-hover">Shop with Points</a>
             <a className="link link-hover">Reload Your Balance</a>
+            <a className="link link-hover">Reload Your Balance</a>
             <a className="link link-hover">Electronic Web Currency Converter</a>
             <fieldset className="form-control w-60">
               <label className="label">
